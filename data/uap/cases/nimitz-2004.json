@@ -1,0 +1,21 @@
+{
+  "slug": "nimitz-2004",
+  "title": "USS Nimitz Encounter (2004)",
+  "summary": "One of the most credible UAP encounters involving U.S. Navy pilots and radar systems.",
+  "sections": [
+    {
+      "heading": "Overview",
+      "content": "In 2004, U.S. Navy pilots encountered an unidentified object off the coast of California..."
+    },
+    {
+      "heading": "Pilot Testimony",
+      "content": "Commander David Fravor described the object as a 'Tic Tac'..."
+    },
+    {
+      "heading": "Radar Data",
+      "content": "Radar operators tracked objects descending rapidly from high altitude..."
+    }
+  ],
+  "tags": ["military", "pilot-report", "radar"],
+  "related": ["tic-tac", "go-fast"]
+}

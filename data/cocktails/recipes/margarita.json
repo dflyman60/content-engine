@@ -1,0 +1,21 @@
+{
+  "slug": "margarita",
+  "title": "Margarita",
+  "summary": "A crisp tequila cocktail built around fresh lime, orange liqueur, and balance.",
+  "ingredients": [
+    "2 oz blanco tequila",
+    "1 oz fresh lime juice",
+    "3/4 oz orange liqueur",
+    "1/2 oz agave syrup or simple syrup",
+    "Salt for rim, optional"
+  ],
+  "steps": [
+    "Add tequila, lime juice, orange liqueur, and syrup to a shaker.",
+    "Add ice and shake hard.",
+    "Strain into a rocks glass over fresh ice.",
+    "Garnish with a lime wheel."
+  ],
+  "notes": "Fresh lime is essential. Adjust sweetness depending on the tequila and orange liqueur.",
+  "tags": ["tequila", "citrus", "classic", "shaken"],
+  "related": ["whiskey-sour"]
+}

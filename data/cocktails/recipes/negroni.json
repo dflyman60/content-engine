@@ -1,0 +1,20 @@
+{
+  "slug": "negroni",
+  "title": "Negroni",
+  "summary": "A bold, bittersweet classic made with gin, Campari, and sweet vermouth.",
+  "ingredients": [
+    "1 oz gin",
+    "1 oz Campari",
+    "1 oz sweet vermouth",
+    "Orange peel"
+  ],
+  "steps": [
+    "Add gin, Campari, and sweet vermouth to a mixing glass.",
+    "Add ice and stir until chilled.",
+    "Strain into a rocks glass over a large cube.",
+    "Express orange peel over the drink and garnish."
+  ],
+  "notes": "Equal parts is classic, but you can increase the gin slightly for a stronger, drier version.",
+  "tags": ["gin", "classic", "stirred", "bitter"],
+  "related": ["old-fashioned"]
+}

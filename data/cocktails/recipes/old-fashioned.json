@@ -1,0 +1,22 @@
+{
+  "slug": "old-fashioned",
+  "title": "Old Fashioned",
+  "summary": "A timeless whiskey cocktail built around balance, bitters, and a proper pour.",
+  "ingredients": [
+    "2 oz bourbon or rye whiskey",
+    "1/4 oz simple syrup or 1 sugar cube",
+    "2–3 dashes Angostura bitters",
+    "Orange peel",
+    "Large ice cube"
+  ],
+  "steps": [
+    "Add sugar or simple syrup and bitters to a mixing glass.",
+    "Add whiskey and ice.",
+    "Stir until well chilled.",
+    "Strain over a large ice cube.",
+    "Express orange peel over the drink and garnish."
+  ],
+  "notes": "Use rye for a spicier profile or bourbon for a rounder, sweeter drink.",
+  "tags": ["whiskey", "classic", "stirred", "strong"],
+  "related": ["whiskey-sour"]
+}

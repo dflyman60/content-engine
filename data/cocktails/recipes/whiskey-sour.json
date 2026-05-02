@@ -1,0 +1,22 @@
+{
+  "slug": "whiskey-sour",
+  "title": "Whiskey Sour",
+  "summary": "A bright, balanced whiskey cocktail with citrus, sweetness, and a silky finish.",
+  "ingredients": [
+    "2 oz bourbon",
+    "3/4 oz fresh lemon juice",
+    "3/4 oz simple syrup",
+    "Optional: 1 egg white",
+    "Ice"
+  ],
+  "steps": [
+    "Add bourbon, lemon juice, simple syrup, and egg white if using to a shaker.",
+    "Dry shake without ice if using egg white.",
+    "Add ice and shake hard.",
+    "Strain into a rocks glass over fresh ice or serve up.",
+    "Garnish with a cherry or lemon wheel."
+  ],
+  "notes": "Fresh lemon juice makes a major difference. Avoid bottled sour mix.",
+  "tags": ["whiskey", "citrus", "classic", "shaken"],
+  "related": ["old-fashioned"]
+}
