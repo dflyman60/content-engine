@@ -29,44 +29,53 @@ export default function App() {
   useEffect(() => {
     let title = "";
     let description = "";
-  
+
     if (route.type === "content" && route.slug) {
       if (route.site.key === "cocktails") {
         const recipe = getCocktailRecipeBySlug(route.slug);
+
         if (recipe) {
           title = `${recipe.title} | Velvet Pour`;
           description = recipe.summary;
+        } else {
+          title = "Velvet Pour";
+          description =
+            "Award-inspired cocktails, techniques, and home bar guidance.";
         }
       } else {
         const uapCase = getUapCaseBySlug(route.slug);
+
         if (uapCase) {
           title = `${uapCase.title} | UAP Cases`;
           description = uapCase.summary;
+        } else {
+          title = "UAP Cases";
+          description =
+            "Structured case analysis of UAP sightings, reports, and unexplained events.";
         }
       }
+    } else if (route.site.key === "cocktails") {
+      title = "Velvet Pour";
+      description =
+        "Award-inspired cocktails, techniques, and home bar guidance.";
     } else {
-      if (route.site.key === "cocktails") {
-        title = "Velvet Pour";
-        description = "Award-inspired cocktails, techniques, and home bar guidance.";
-      } else {
-        title = "UAP Cases";
-        description = "Structured case analysis of UAP sightings, reports, and unexplained events.";
-      }
+      title = "UAP Cases";
+      description =
+        "Structured case analysis of UAP sightings, reports, and unexplained events.";
     }
 
     document.title = title;
 
     let meta = document.querySelector('meta[name="description"]');
+
     if (!meta) {
       meta = document.createElement("meta");
       meta.name = "description";
       document.head.appendChild(meta);
     }
+
     meta.setAttribute("content", description);
-
   }, [route]);
-
-===================
 
   if (route.site.key === "cocktails") {
     return (
