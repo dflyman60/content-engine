@@ -33,26 +33,16 @@ export default function App() {
     if (route.type === "content" && route.slug) {
       if (route.site.key === "cocktails") {
         const recipe = getCocktailRecipeBySlug(route.slug);
-
-        if (recipe) {
-          title = `${recipe.title} | Velvet Pour`;
-          description = recipe.summary;
-        } else {
-          title = "Velvet Pour";
-          description =
-            "Award-inspired cocktails, techniques, and home bar guidance.";
-        }
+        title = recipe ? `${recipe.title} | Velvet Pour` : "Velvet Pour";
+        description =
+          recipe?.summary ||
+          "Award-inspired cocktails, techniques, and home bar guidance.";
       } else {
         const uapCase = getUapCaseBySlug(route.slug);
-
-        if (uapCase) {
-          title = `${uapCase.title} | UAP Cases`;
-          description = uapCase.summary;
-        } else {
-          title = "UAP Cases";
-          description =
-            "Structured case analysis of UAP sightings, reports, and unexplained events.";
-        }
+        title = uapCase ? `${uapCase.title} | UAP Cases` : "UAP Cases";
+        description =
+          uapCase?.summary ||
+          "Structured case analysis of UAP sightings, reports, and unexplained events.";
       }
     } else if (route.site.key === "cocktails") {
       title = "Velvet Pour";
