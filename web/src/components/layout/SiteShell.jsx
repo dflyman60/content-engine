@@ -9,23 +9,18 @@ export default function SiteShell({ title, subtitle, children }) {
         color: "#171717",
       }}
     >
-      <header
-        style={{
-          padding: "32px",
-          borderBottom: "1px solid #e2e2df",
-          background: "#ffffff",
-        }}
-      >
+
+      <header style={{ padding: "32px", borderBottom: "1px solid #ddd", background: "#fff" }}>
         <div style={{ maxWidth: "960px", margin: "0 auto" }}>
-          <h1 style={{ margin: 0, fontSize: "32px" }}>{title}</h1>
-          {subtitle && (
-            <p style={{ margin: "8px 0 0", color: "#666", fontSize: "16px" }}>
-              {subtitle}
-            </p>
-          )}
+          <h1>{title}</h1>
+          <p style={{ color: "#666" }}>{subtitle}</p>
+      
+          <div style={{ marginTop: "12px" }}>
+            <a href="/" style={{ marginRight: "16px" }}>UAP</a>
+            <a href="/?site=cocktails">Cocktails</a>
+          </div>
         </div>
       </header>
-
       {children}
     </div>
   );
