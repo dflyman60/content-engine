@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://velvetpour.bar/sitemap-cocktails.xml
