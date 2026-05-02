@@ -16,8 +16,8 @@ export default function SiteShell({ title, subtitle, children }) {
           <p style={{ color: "#666" }}>{subtitle}</p>
       
           <div style={{ marginTop: "12px" }}>
-            <a href="/" style={{ marginRight: "16px" }}>UAP</a>
-            <a href="/?site=cocktails">Cocktails</a>
+            <a href="https://uapcases.com" style={{ marginRight: "16px" }}>UAP</a>
+            <a href="https://velvetpour.bar">Cocktails</a>
           </div>
         </div>
       </header>

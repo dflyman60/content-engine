@@ -14,17 +14,22 @@ export const DOMAIN_CONFIG = {
 };
 
 export function getDomainConfig() {
-  const params = new URLSearchParams(window.location.search);
-  const override = params.get("site");
-
-  if (override === "cocktails") return DOMAIN_CONFIG.cocktails;
-  if (override === "uap") return DOMAIN_CONFIG.uap;
-
   const hostname = window.location.hostname.toLowerCase();
 
-  const match = Object.values(DOMAIN_CONFIG).find((site) =>
-    site.hostnames.includes(hostname)
-  );
+  // Local-only: optional ?site= override for testing (production hostnames skip this)
+  if (hostname === "localhost" || hostname === "127.0.0.1") {
+    const siteParam = new URLSearchParams(window.location.search).get("site");
+    if (siteParam === "cocktails") {
+      return DOMAIN_CONFIG.cocktails;
+    }
+    return DOMAIN_CONFIG.uap;
+  }
 
-  return match || DOMAIN_CONFIG.uap;
+  for (const config of Object.values(DOMAIN_CONFIG)) {
+    if (config.hostnames.includes(hostname)) {
+      return config;
+    }
+  }
+
+  return DOMAIN_CONFIG.uap;
 }

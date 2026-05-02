@@ -10,7 +10,7 @@ export default function CocktailRecipePage({ slug }) {
     return (
       <main style={{ maxWidth: "760px", margin: "0 auto", padding: "32px" }}>
         <h2>Recipe not found</h2>
-        <a href="/?site=cocktails">Back to recipes</a>
+        <a href="/">Back to recipes</a>
       </main>
     );
   }
@@ -19,7 +19,7 @@ export default function CocktailRecipePage({ slug }) {
 
   return (
     <main style={{ maxWidth: "760px", margin: "0 auto", padding: "32px" }}>
-      <a href="/?site=cocktails">← Back to recipes</a>
+      <a href="/">← Back to recipes</a>
 
       <h2>{data.title}</h2>
       <p>{data.summary}</p>
@@ -75,7 +75,7 @@ export default function CocktailRecipePage({ slug }) {
             {related.map((item) => (
               <a
                 key={item.slug}
-                href={`/drinks/${item.slug}?site=cocktails`}
+                href={`/drinks/${item.slug}`}
                 style={{
                   display: "block",
                   padding: "16px",

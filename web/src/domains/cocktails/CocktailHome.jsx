@@ -14,7 +14,7 @@ export default function CocktailHome() {
         {recipes.map((item) => (
           <a
             key={item.slug}
-            href={`/drinks/${item.slug}?site=cocktails`}
+            href={`/drinks/${item.slug}`}
             style={{
               display: "block",
               padding: "20px",
