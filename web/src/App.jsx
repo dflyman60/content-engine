@@ -1,4 +1,10 @@
+import { useEffect } from "react";
 import { resolveCurrentRoute } from "./routes/routeResolver";
+
+import {
+  getUapCaseBySlug,
+  getCocktailRecipeBySlug,
+} from "./utils/contentLoader";
 
 import UapLayout from "./domains/uap/UapLayout";
 import UapHome from "./domains/uap/UapHome";
@@ -19,6 +25,22 @@ function NotFound() {
 
 export default function App() {
   const route = resolveCurrentRoute();
+
+  useEffect(() => {
+    if (route.type === "content" && route.slug) {
+      if (route.site.key === "cocktails") {
+        const recipe = getCocktailRecipeBySlug(route.slug);
+        document.title = recipe ? `${recipe.title} | Velvet Pour` : "Velvet Pour";
+      } else {
+        const uapCase = getUapCaseBySlug(route.slug);
+        document.title = uapCase ? `${uapCase.title} | UAP Cases` : "UAP Cases";
+      }
+      return;
+    }
+
+    document.title =
+      route.site.key === "cocktails" ? "Velvet Pour" : "UAP Cases";
+  }, [route]);
 
   if (route.site.key === "cocktails") {
     return (
