@@ -1,22 +1,57 @@
 {
   "slug": "whiskey-sour",
-  "title": "Whiskey Sour",
-  "summary": "A bright, balanced whiskey cocktail with citrus, sweetness, and a silky finish.",
+  "image": "/images/cocktails/whiskey-sour.jpg",
+  "title": "How to Make a Whiskey Sour That Actually Tastes Right",
+  "subtitle": "Bright, balanced, and built with real citrus.",
+  "summary": "The Whiskey Sour is one of those drinks that gets a bad reputation because it’s so often done wrong. Too sweet, too artificial, or built from a mix that tastes nothing like real citrus. I avoided ordering them for a long time because of that.\n\nBut when it’s done properly—with fresh lemon juice, a clean whiskey, and just enough sweetness—it’s one of the most balanced drinks you can make. It’s bright, smooth, and just structured enough to feel like a real cocktail instead of something thrown together.",
+  "tags": ["whiskey", "classic", "shaken", "citrus"],
+  "quick_mix": {
+    "headline": "Quick Mix",
+    "badges": ["Shaken", "Whiskey", "Citrus"],
+    "lines": [
+      "2 oz bourbon or rye",
+      "3/4 oz fresh lemon juice",
+      "1/2 oz simple syrup",
+      "Optional: egg white",
+      "Shake with ice, strain into a rocks glass"
+    ]
+  },
+  "editorial_sections": [
+    {
+      "title": "Why Most Whiskey Sours Miss the Mark",
+      "body": "The biggest problem is shortcuts. Bottled sour mix might be easy, but it strips the drink of everything that makes it work. You lose the brightness, the balance, and that clean edge that fresh citrus brings.\n\nOnce you switch to real lemon juice, the entire drink changes."
+    },
+    {
+      "title": "Balance Is Everything",
+      "body": "A good Whiskey Sour is all about balance between sour and sweet. Too much lemon and it feels sharp. Too much sugar and it turns flat.\n\nI usually start with a 3/4 oz lemon and 1/2 oz simple syrup, then adjust slightly depending on the whiskey."
+    },
+    {
+      "title": "To Egg White or Not",
+      "body": "The egg white version adds texture more than flavor. It softens the edges and gives the drink a smooth, almost creamy finish.\n\nI’ll use it when I want the drink to feel more polished, but it’s completely optional."
+    },
+    {
+      "title": "What a Good Whiskey Sour Should Feel Like",
+      "body": "It should feel bright from the first sip, with the whiskey still clearly present underneath. The citrus should lift the drink, not overpower it.\n\nWhen it’s right, it’s one of the easiest drinks to go back to."
+    }
+  ],
   "ingredients": [
-    "2 oz bourbon",
+    "2 oz bourbon or rye whiskey",
     "3/4 oz fresh lemon juice",
-    "3/4 oz simple syrup",
-    "Optional: 1 egg white",
+    "1/2 oz simple syrup",
+    "Optional: 1/2 oz egg white",
     "Ice"
   ],
   "steps": [
-    "Add bourbon, lemon juice, simple syrup, and egg white if using to a shaker.",
-    "Dry shake without ice if using egg white.",
-    "Add ice and shake hard.",
+    "Add whiskey, lemon juice, simple syrup, and egg white (if using) to a shaker.",
+    "Dry shake (no ice) if using egg white.",
+    "Add ice and shake until well chilled.",
     "Strain into a rocks glass over fresh ice or serve up.",
-    "Garnish with a cherry or lemon wheel."
+    "Optional: garnish with a cherry or lemon peel."
   ],
-  "notes": "Fresh lemon juice makes a major difference. Avoid bottled sour mix.",
-  "tags": ["whiskey", "citrus", "classic", "shaken"],
-  "related": ["old-fashioned"]
+  "notes": "Always use fresh lemon juice. Adjust sweetness slightly depending on your whiskey and taste preference.",
+  "related": ["old-fashioned", "manhattan", "negroni"],
+  "sidebar": {
+    "sectionTitle": "More Classic Cocktails",
+    "featured": ["old-fashioned", "manhattan", "negroni"]
+  }
 }

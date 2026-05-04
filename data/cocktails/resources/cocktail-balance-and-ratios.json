@@ -1,0 +1,32 @@
+{
+  "slug": "cocktail-balance-and-ratios",
+  "type": "resource",
+  "title": "Most Cocktails Fail Here (And It’s Not the Alcohol)",
+  "subtitle": "If your drink tastes off, this is probably why.",
+  "summary": "Most people assume a bad cocktail comes down to the alcohol. It doesn’t. It’s almost always balance. Too sweet, too sharp, too flat — something is just slightly off, and it throws the whole drink.\n\nOnce you understand how ratios actually work, everything gets easier. You stop guessing, and your drinks start tasting intentional.",
+  "image": "/images/cocktails/resources/balance.png",
+  "tags": ["technique", "balance", "fundamentals"],
+  "sections": [
+    {
+      "title": "It’s Not About the Recipe, It’s About the Ratio",
+      "body": "Recipes are helpful, but they’re not the whole story. The real structure of a cocktail comes from how the ingredients relate to each other.\n\nOnce you understand the ratio behind a drink, you can adjust it, fix it, or even build your own without starting from scratch."
+    },
+    {
+      "title": "The Basic Balance: Strong, Sweet, Sour",
+      "body": "Most cocktails follow a simple structure: spirit for strength, sugar for sweetness, and citrus for brightness.\n\nIf one of those is too heavy or too light, the drink feels off. The goal isn’t perfection — it’s balance that feels natural when you take a sip."
+    },
+    {
+      "title": "Why Drinks Taste ‘Off’",
+      "body": "If a drink is too sharp, it usually needs more sweetness or dilution. If it’s too sweet, it probably needs more acid or a stronger base.\n\nMost issues aren’t dramatic — they’re small imbalances that add up."
+    },
+    {
+      "title": "Start With a Simple Ratio",
+      "body": "A good place to start is 2 parts spirit, 3/4 part citrus, and 1/2 part sweet. From there, you adjust based on taste and the ingredients you’re using.\n\nThis works for a lot of drinks, especially sours, and it gives you a solid starting point instead of guessing."
+    },
+    {
+      "title": "Taste and Adjust — Every Time",
+      "body": "Even when you know the ratio, ingredients change. Lemons vary, spirits differ, and small shifts matter.\n\nTaste your drink, adjust slightly, and pay attention. That’s how you get better quickly."
+    }
+  ],
+  "related": ["whiskey-sour", "daiquiri", "old-fashioned"]
+}

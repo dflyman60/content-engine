@@ -1,0 +1,32 @@
+{
+  "slug": "essential-tools-for-stirred-cocktails",
+  "type": "resource",
+  "title": "You Don’t Need 15 Tools (Just These for Stirred Drinks)",
+  "subtitle": "Skip the clutter and use what actually makes a difference.",
+  "summary": "Most home bars get overcomplicated fast. Drawers full of tools, half of them barely used.\n\nThe truth is, for stirred cocktails, you only need a small set of things that actually work. Once you have those dialed in, everything else is just noise.",
+  "image": "/images/cocktails/resources/stirred-tools.jpg",
+  "tags": ["bar tools", "stirred", "home bar"],
+  "sections": [
+    {
+      "title": "Start With a Proper Mixing Glass",
+      "body": "You don’t need anything fancy, but you do need something that gives you control. A solid mixing glass holds temperature better and makes stirring smoother.\n\nThis is one of those tools you’ll use constantly, so it’s worth getting right."
+    },
+    {
+      "title": "A Bar Spoon That Actually Feels Good",
+      "body": "A good bar spoon makes stirring easier and more consistent. You want something that moves smoothly without fighting you.\n\nIf it feels awkward, you’ll notice it immediately."
+    },
+    {
+      "title": "Straining Cleanly Matters",
+      "body": "A Hawthorne strainer will handle most drinks. Add a fine mesh strainer if you want a cleaner finish.\n\nThis is less about equipment and more about the result — a smoother, more polished drink."
+    },
+    {
+      "title": "Ice Is Part of Your Toolset",
+      "body": "Your ice is doing more work than most of your tools. Large cubes for serving, solid ice for stirring — this matters more than adding another gadget.\n\nIf you ignore this, everything else suffers."
+    },
+    {
+      "title": "What You Don’t Need",
+      "body": "You don’t need a drawer full of specialized tools to make great drinks. Most of them don’t get used.\n\nStart simple, use what works, and add things only when you actually need them."
+    }
+  ],
+  "related": ["old-fashioned", "negroni", "ice-matters-in-cocktails"]
+}

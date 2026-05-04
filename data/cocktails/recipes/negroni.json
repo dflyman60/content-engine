@@ -1,20 +1,55 @@
 {
   "slug": "negroni",
-  "title": "Negroni",
-  "summary": "A bold, bittersweet classic made with gin, Campari, and sweet vermouth.",
+  "image": "/images/cocktails/negroni.jpg",
+  "title": "How to Make a Negroni You’ll Actually Want to Drink",
+  "subtitle": "Bitter, balanced, and better than your first impression.",
+  "summary": "I didn’t love my first Negroni. It felt too bitter, too sharp, and honestly a little confusing. But somewhere along the way, it clicked. The bitterness stopped feeling aggressive and started feeling structured. The sweetness wasn’t syrupy — it was balancing something deeper. Now it’s one of those drinks I come back to when I want something that feels intentional.\n\nA good Negroni isn’t about hiding the bitterness. It’s about balancing it so the drink feels clean, bold, and just a little addictive.",
+  "tags": ["gin", "classic", "stirred", "bitter"],
+  "quick_mix": {
+    "headline": "Quick Mix",
+    "badges": ["Stirred", "Gin", "Classic"],
+    "lines": [
+      "1 oz gin",
+      "1 oz Campari",
+      "1 oz sweet vermouth",
+      "Stir with ice, serve over a large cube, garnish with orange peel"
+    ]
+  },
+  "editorial_sections": [
+    {
+      "title": "It’s Not Supposed to Be Easy",
+      "body": "The Negroni is one of those drinks that doesn’t try to win you over immediately. It’s bitter, a little sharp, and very direct. That’s part of the appeal.\n\nOnce you stop expecting it to taste sweet or easy, it starts to make more sense. It’s structured, layered, and surprisingly clean when it’s built right."
+    },
+    {
+      "title": "Equal Parts — But Not Careless",
+      "body": "On paper, the Negroni is simple: equal parts gin, Campari, and sweet vermouth. But that doesn’t mean you can be careless.\n\nThe quality of each ingredient matters a lot here, because there’s nothing hiding behind anything else. If one piece is off, you taste it immediately."
+    },
+    {
+      "title": "Gin Choice Changes Everything",
+      "body": "A more citrus-forward gin will brighten the drink, while a heavier, juniper-forward gin will make it feel deeper and more serious.\n\nI usually lean toward something balanced so the Campari doesn’t completely take over."
+    },
+    {
+      "title": "What a Good Negroni Should Feel Like",
+      "body": "A good Negroni should feel balanced, not punishing. You get bitterness first, then a rounded sweetness, and finally a clean, slightly herbal finish.\n\nIt should make you want another sip, not push you away."
+    }
+  ],
   "ingredients": [
     "1 oz gin",
     "1 oz Campari",
     "1 oz sweet vermouth",
-    "Orange peel"
+    "Orange peel",
+    "Large ice cube"
   ],
   "steps": [
     "Add gin, Campari, and sweet vermouth to a mixing glass.",
-    "Add ice and stir until chilled.",
-    "Strain into a rocks glass over a large cube.",
-    "Express orange peel over the drink and garnish."
+    "Fill with ice and stir until well chilled.",
+    "Strain over a large ice cube in a rocks glass.",
+    "Express an orange peel over the drink and garnish."
   ],
-  "notes": "Equal parts is classic, but you can increase the gin slightly for a stronger, drier version.",
-  "tags": ["gin", "classic", "stirred", "bitter"],
-  "related": ["old-fashioned"]
+  "notes": "If the drink feels too bitter at first, try slightly increasing the vermouth or choosing a softer gin.",
+  "related": ["old-fashioned", "manhattan", "whiskey-sour"],
+  "sidebar": {
+    "sectionTitle": "More Classic Cocktails",
+    "featured": ["old-fashioned", "manhattan", "whiskey-sour"]
+  }
 }

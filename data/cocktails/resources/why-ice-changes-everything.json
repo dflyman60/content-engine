@@ -1,0 +1,28 @@
+{
+  "slug": "why-ice-changes-everything",
+  "type": "resource",
+  "title": "Why Ice Changes Everything",
+  "subtitle": "The most overlooked part of your drink is doing the most work.",
+  "summary": "Understanding how ice affects dilution, temperature, and balance is one of the fastest ways to improve your cocktails.",
+  "image": "/images/cocktails/resources/ice.jpg",
+  "tags": ["ice", "technique", "fundamentals"],
+  "sections": [
+    {
+      "title": "It’s Not Just About Cold",
+      "body": "Ice doesn’t just chill your drink—it controls dilution. And dilution is what brings a cocktail into balance. Too fast and the drink falls apart. Too slow and it never opens up."
+    },
+    {
+      "title": "Size Changes Everything",
+      "body": "Large cubes melt slower, which makes them ideal for drinks like the Old Fashioned. Smaller ice increases surface area, speeding up dilution when you need it."
+    },
+    {
+      "title": "Clarity and Structure",
+      "body": "Clear ice isn’t just visual. It melts more predictably and keeps your drink cleaner over time. Cloudy ice tends to break down faster and unevenly."
+    },
+    {
+      "title": "Pay Attention to It",
+      "body": "If something feels off in your drink, it’s often the ice. Once you start paying attention to it, you’ll notice how much it changes the experience."
+    }
+  ],
+  "related": ["old-fashioned", "whiskey-sour"]
+}

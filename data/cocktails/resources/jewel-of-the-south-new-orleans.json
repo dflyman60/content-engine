@@ -1,0 +1,24 @@
+{
+  "slug": "jewel-of-the-south-new-orleans",
+  "type": "resource",
+  "title": "Jewel of the South, New Orleans",
+  "subtitle": "Southern hospitality with a bar that still demands precision.",
+  "summary": "New Orleans is easy to love and easy to write off as all sugar and party juice. Jewel of the South is a useful counterpoint.\n\nThe food and drink read thoughtful—rooted in place without turning into a theme park. You get warmth in the service and rigor in the glass, which is exactly the balance a real cocktail bar should be chasing in that city.",
+  "image": "/images/cocktails/bars/jewel-of-the-south-new-orleans.jpg",
+  "tags": ["best bars", "cocktail bar", "us"],
+  "sections": [
+    {
+      "title": "Why It Stands Out",
+      "body": "It’s not trying to be the loudest room on the block. The point is a complete experience: food and drink that feel considered, and a room that still knows how to take care of people.\n\nIf you’re the type who judges a place by whether the non-alcoholic path is treated with respect, you’ll notice the difference here."
+    },
+    {
+      "title": "What to Notice",
+      "body": "The way local ingredients and classic structure show up at the same time—without the menu turning into a lecture.\n\nWatch for balance: New Orleans can lean sweet; the best programs know when to pull it back and let acid and bitter do their job."
+    },
+    {
+      "title": "Before You Go",
+      "body": "Book if you can. A place this dialed in doesn’t stay empty on a good night in a restaurant town.\n\nIf you’re visiting, don’t try to “speed run” the city after—this is a sit-down, pay-attention kind of stop. You’ll get more out of it if you do."
+    }
+  ],
+  "related": ["old-fashioned", "negroni"]
+}

@@ -1,0 +1,56 @@
+{
+  "slug": "manhattan",
+  "image": "/images/cocktails/manhattan.jpg",
+  "title": "How to Make a Manhattan That Feels Proper",
+  "subtitle": "Spirit-forward, balanced, and not buried under sweetness.",
+  "summary": "I used to think of the Manhattan as the Old Fashioned’s more polished cousin. It has that same quiet confidence, but there’s a little more softness and depth when it’s built well. The first few I had were either too sweet, too warm, or so heavy on vermouth that the whiskey disappeared completely. That’s when I started paying closer attention to the balance. A good Manhattan should feel composed. The whiskey should still lead, the vermouth should round it out, and the bitters should pull everything together without making a scene.",
+  "tags": ["whiskey", "classic", "stirred", "spirit-forward"],
+  "quick_mix": {
+    "headline": "Quick Mix",
+    "badges": ["Stirred", "Whiskey", "Classic"],
+    "lines": [
+      "2 oz rye or bourbon",
+      "1 oz sweet vermouth",
+      "2 dashes Angostura bitters",
+      "Stir with ice, strain into a chilled coupe, garnish with cherry"
+    ]
+  },
+  "editorial_sections": [
+    {
+      "title": "Why the Manhattan Deserves Attention",
+      "body": "The Manhattan is one of those drinks that exposes every shortcut. If the vermouth is tired, you know it. If the whiskey is too soft, it gets lost. If it is stirred poorly, the whole thing feels flat.\n\nThat is what I like about it. It asks for a little care without becoming complicated. When it is done right, it feels smooth, structured, and grown-up without trying too hard."
+    },
+    {
+      "title": "Rye or Bourbon?",
+      "body": "I usually reach for rye when I want the drink to have more backbone. Rye gives the Manhattan a drier, spicier edge that keeps the vermouth from taking over.\n\nBourbon makes it rounder and softer, which can be beautiful too, especially if you like a slightly richer drink. The key is choosing the whiskey on purpose, not just grabbing whatever is open."
+    },
+    {
+      "title": "The Vermouth Matters More Than People Think",
+      "body": "Sweet vermouth is not just filler. It is half the personality of the drink. If it has been sitting open too long, the Manhattan will taste dull before you even get to the second sip.\n\nI keep vermouth refrigerated and treat it like something that actually matters, because in this drink, it does."
+    },
+    {
+      "title": "What a Good Manhattan Should Taste Like",
+      "body": "A good Manhattan should feel balanced from the first sip. You should taste whiskey first, then the sweetness and spice from the vermouth, with the bitters adding just enough structure underneath.\n\nIt should not taste syrupy. It should not taste thin. It should have weight, but still feel clean."
+    }
+  ],
+  "ingredients": [
+    "2 oz rye whiskey or bourbon",
+    "1 oz sweet vermouth",
+    "2 dashes Angostura bitters",
+    "Brandied cherry, for garnish",
+    "Ice"
+  ],
+  "steps": [
+    "Add whiskey, sweet vermouth, and bitters to a mixing glass.",
+    "Fill the mixing glass with ice.",
+    "Stir until well chilled and properly diluted.",
+    "Strain into a chilled coupe or cocktail glass.",
+    "Garnish with a brandied cherry."
+  ],
+  "notes": "Use rye for a drier, more structured Manhattan. Use bourbon for a softer, rounder version. Keep sweet vermouth refrigerated after opening.",
+  "related": ["old-fashioned", "negroni", "whiskey-sour"],
+  "sidebar": {
+    "sectionTitle": "More Spirit-Forward Cocktails",
+    "featured": ["old-fashioned", "negroni", "whiskey-sour"]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "slug": "tonic-matters",
+  "type": "resource",
+  "title": "Your Gin & Tonic Is Only As Good As Your Tonic",
+  "subtitle": "And most people don’t think about it at all.",
+  "summary": "A gin and tonic looks simple, which is probably why it gets overlooked. Most people focus on the gin and barely think about the tonic.\n\nBut tonic isn’t neutral. It’s bitter, slightly sweet, and it makes up most of the drink. If it’s off, the whole thing feels flat, no matter how good your gin is.",
+  "image": "/images/cocktails/resources/tonic.jpg",
+  "tags": ["ingredients", "tonic", "fundamentals"],
+  "sections": [
+    {
+      "title": "Tonic Is Doing Most of the Work",
+      "body": "In a gin and tonic, tonic water is the majority of the drink. That means it’s carrying most of the flavor, the carbonation, and the overall structure.\n\nIf it’s too sweet, too flat, or just dull, there’s nothing the gin can do to fix it."
+    },
+    {
+      "title": "Not All Tonics Taste the Same",
+      "body": "Some tonics are crisp and citrusy. Others are heavier, sweeter, or more bitter.\n\nThat means the same gin can taste completely different depending on what you pair it with."
+    },
+    {
+      "title": "Why Most Gin & Tonics Taste Flat",
+      "body": "Flat usually means one of two things: the tonic is too sweet, or it’s lost its carbonation.\n\nEither way, the drink loses that clean, refreshing edge and just feels heavy."
+    },
+    {
+      "title": "Match the Tonic to the Gin",
+      "body": "Lighter, citrus-forward gins pair better with clean, crisp tonics. More herbal or bold gins can handle something slightly more bitter.\n\nIt doesn’t have to be complicated — just intentional."
+    },
+    {
+      "title": "What to Pay Attention To",
+      "body": "If your gin and tonic feels dull or overly sweet, the tonic is usually the problem.\n\nTry a different one and you’ll notice the difference immediately."
+    }
+  ],
+  "related": ["negroni", "cocktail-balance-and-ratios"]
+}

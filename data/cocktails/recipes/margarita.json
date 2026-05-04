@@ -1,21 +1,62 @@
 {
   "slug": "margarita",
-  "title": "Margarita",
-  "summary": "A crisp tequila cocktail built around fresh lime, orange liqueur, and balance.",
+  "title": "How to Make a Margarita That Actually Tastes Fresh",
+  "subtitle": "Bright, clean, and not buried under sugar.",
+  "summary": "The Margarita is one of the most misunderstood cocktails out there. It’s everywhere, but it’s almost never done well. Too sweet, too artificial, or built from a mix that completely misses the point.\n\nWhen it’s made properly, it’s simple and sharp in the best way. Fresh lime, good tequila, and just enough sweetness to balance everything out. That’s it.",
+  "image": "/images/cocktails/margarita.jpg",
+  "tags": ["tequila", "classic", "shaken", "citrus"],
+  "quick_mix": {
+    "headline": "Quick Mix",
+    "badges": ["Shaken", "Tequila", "Classic"],
+    "lines": [
+      "2 oz tequila",
+      "1 oz fresh lime juice",
+      "1/2 oz orange liqueur",
+      "Optional: 1/4 oz simple syrup",
+      "Shake with ice, serve over fresh ice or up"
+    ]
+  },
+  "editorial_sections": [
+    {
+      "title": "Skip the Mix — It’s Not Even Close",
+      "body": "Most bad Margaritas come from bottled mix. It’s overly sweet, flat, and completely misses the brightness that makes this drink work.\n\nFresh lime changes everything. It gives the drink structure instead of just sweetness."
+    },
+    {
+      "title": "Tequila Matters More Than You Think",
+      "body": "A clean blanco tequila works best here. It keeps the drink crisp and lets the citrus come through.\n\nYou don’t need anything overly expensive, but you do want something you’d actually drink on its own."
+    },
+    {
+      "title": "Balance Is the Whole Drink",
+      "body": "This is another drink where ratios matter. Too much lime and it’s harsh. Too much sweetness and it feels heavy.\n\nThe goal is a clean balance where nothing sticks out too much."
+    },
+    {
+      "title": "Salt — Optional, But Intentional",
+      "body": "Salt changes how you experience the drink. It softens the acidity and brings out the flavors.\n\nI’ll use it sometimes, but not always. It depends on the mood and the tequila."
+    },
+    {
+      "title": "What a Good Margarita Should Feel Like",
+      "body": "It should feel bright and refreshing, with the tequila still clearly present. Not syrupy, not dull, and definitely not artificial.\n\nWhen it’s right, it’s one of the easiest drinks to keep coming back to."
+    }
+  ],
   "ingredients": [
     "2 oz blanco tequila",
     "1 oz fresh lime juice",
-    "3/4 oz orange liqueur",
-    "1/2 oz agave syrup or simple syrup",
-    "Salt for rim, optional"
+    "1/2 oz orange liqueur (Cointreau or similar)",
+    "Optional: 1/4 oz simple syrup",
+    "Salt (optional)",
+    "Ice"
   ],
   "steps": [
-    "Add tequila, lime juice, orange liqueur, and syrup to a shaker.",
-    "Add ice and shake hard.",
-    "Strain into a rocks glass over fresh ice.",
-    "Garnish with a lime wheel."
+    "Add tequila, lime juice, and orange liqueur to a shaker.",
+    "Add simple syrup if needed based on taste.",
+    "Fill with ice and shake until well chilled.",
+    "Strain over fresh ice in a rocks glass or serve up.",
+    "Optional: rim the glass with salt before serving."
   ],
-  "notes": "Fresh lime is essential. Adjust sweetness depending on the tequila and orange liqueur.",
-  "tags": ["tequila", "citrus", "classic", "shaken"],
-  "related": ["whiskey-sour"]
+  "notes": "Always use fresh lime juice. Adjust sweetness slightly depending on your orange liqueur and preference.",
+  "sidebar": {
+    "featured": ["daiquiri", "whiskey-sour", "negroni"],
+    "sectionTitle": "More Classic Cocktails"
+  },
+  "related": ["daiquiri", "whiskey-sour", "cocktail-balance-and-ratios"]
 }

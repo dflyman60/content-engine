@@ -1,0 +1,58 @@
+{
+  "slug": "martini",
+  "image": "/images/cocktails/martini.jpg",
+  "title": "How to Make a Martini Without Overthinking It",
+  "subtitle": "Cold, clean, and a little unapologetic.",
+  "summary": "The Martini has a way of making people overcomplicate things. Everyone has an opinion, and most of them are delivered like rules. Shake vs stir, gin vs vodka, how much vermouth is “correct”… it can get exhausting.\n\nI stopped treating it like a debate and started treating it like a drink. A Martini should be cold, clean, and built the way you actually enjoy it. That said, there are a few choices that make a big difference, and once you understand those, everything else gets easier.",
+  "tags": ["gin", "classic", "stirred", "spirit-forward"],
+  "quick_mix": {
+    "headline": "Quick Mix",
+    "badges": ["Stirred", "Gin", "Classic"],
+    "lines": [
+      "2 1/2 oz gin",
+      "1/2 oz dry vermouth",
+      "Stir with ice, strain into a chilled glass",
+      "Garnish with olive or lemon twist"
+    ]
+  },
+  "editorial_sections": [
+    {
+      "title": "Let’s Get One Thing Out of the Way",
+      "body": "A Martini is not just cold vodka in a fancy glass. If that’s what you want, that’s fine—but it’s not the same drink.\n\nA proper Martini has structure. The vermouth matters, the dilution matters, and the way you chill it matters. Otherwise, you’re just drinking chilled spirits and calling it something more interesting."
+    },
+    {
+      "title": "Gin vs Vodka (Choose on Purpose)",
+      "body": "Gin brings character. Botanicals, citrus, sometimes a little spice—it actually gives the drink something to work with.\n\nVodka makes it quieter and cleaner, which some people prefer. I tend to lean gin because it feels more complete, but the real point is to choose intentionally, not just default."
+    },
+    {
+      "title": "Vermouth Isn’t Optional",
+      "body": "This is where things get a little controversial. Vermouth is not a suggestion. It’s part of the drink.\n\nYou can dial it back, sure. Make it drier if that’s your preference. But completely skipping it removes the balance that makes a Martini what it is."
+    },
+    {
+      "title": "Cold Matters More Than Anything",
+      "body": "If your Martini isn’t cold enough, nothing else really saves it. Stir it properly, chill your glass, and don’t rush it.\n\nThis is one of those drinks where small details show up immediately in the final result."
+    },
+    {
+      "title": "What a Good Martini Should Feel Like",
+      "body": "It should feel crisp, clean, and intentional. Not watery, not harsh, and definitely not forgettable.\n\nWhen it’s right, it’s simple in a way that feels deliberate, not boring."
+    }
+  ],
+  "ingredients": [
+    "2 1/2 oz gin (or vodka)",
+    "1/2 oz dry vermouth",
+    "Lemon twist or olive",
+    "Ice"
+  ],
+  "steps": [
+    "Add gin (or vodka) and dry vermouth to a mixing glass.",
+    "Fill with ice and stir until very well chilled.",
+    "Strain into a chilled coupe or Martini glass.",
+    "Garnish with a lemon twist or olive."
+  ],
+  "notes": "Adjust vermouth to taste for a drier or wetter Martini. Always serve very cold.",
+  "related": ["negroni", "manhattan", "old-fashioned"],
+  "sidebar": {
+    "sectionTitle": "More Spirit-Forward Cocktails",
+    "featured": ["negroni", "manhattan", "old-fashioned"]
+  }
+}

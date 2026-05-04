@@ -1,0 +1,28 @@
+{
+  "slug": "fresh-citrus-matters",
+  "type": "resource",
+  "title": "Fresh Citrus Changes Everything (And It’s Not Subtle)",
+  "subtitle": "If your drink tastes off, this is usually why.",
+  "summary": "There’s a huge difference between using fresh citrus and using anything bottled. It’s not a small upgrade — it completely changes the drink.\n\nMost cocktails that feel flat, overly sweet, or just slightly off can usually be traced back to this one shortcut. Once you switch to fresh juice, the difference is immediate.",
+  "image": "/images/cocktails/resources/citrus.jpg",
+  "tags": ["citrus", "ingredients", "fundamentals"],
+  "sections": [
+    {
+      "title": "Why Bottled Juice Doesn’t Work",
+      "body": "Bottled citrus loses the sharpness and brightness that makes a cocktail feel alive. It tends to taste dull, slightly sweet, and a little artificial.\n\nThat might not seem like a big deal, but in a drink like a Daiquiri or Whiskey Sour, it changes everything."
+    },
+    {
+      "title": "Fresh Juice Has Structure",
+      "body": "Fresh lemon and lime juice bring real acidity and balance. They cut through sweetness and give the drink that clean edge that makes you want another sip.\n\nWithout that, the drink feels heavier than it should."
+    },
+    {
+      "title": "It Doesn’t Take Much Effort",
+      "body": "This isn’t a complicated upgrade. Cutting and squeezing a lemon or lime takes less than a minute, and the payoff is immediate.\n\nIt’s probably the easiest way to make your drinks noticeably better."
+    },
+    {
+      "title": "What to Pay Attention To",
+      "body": "Not all citrus is the same. Some lemons are sharper, some limes are sweeter, and that affects your balance.\n\nTaste as you go and adjust slightly. That’s where things start to come together."
+    }
+  ],
+  "related": ["whiskey-sour", "daiquiri", "cocktail-balance-and-ratios"]
+}

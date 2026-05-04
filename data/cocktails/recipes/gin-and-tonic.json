@@ -1,0 +1,55 @@
+{
+  "slug": "gin-and-tonic",
+  "title": "How to Make a Gin & Tonic That Doesn’t Taste Flat",
+  "subtitle": "Simple only works when the ingredients pull their weight.",
+  "summary": "A Gin & Tonic looks like the easiest drink in the world, which is exactly why people stop paying attention. Gin, tonic, ice, lime — done. Except not really.\n\nBecause tonic makes up most of the drink, it can either make the cocktail feel crisp and alive or dull and overly sweet. If your Gin & Tonic tastes flat, the tonic is usually the first place I’d look.",
+  "image": "/images/cocktails/gin-and-tonic.jpg",
+  "tags": ["gin", "classic", "highball", "tonic"],
+  "quick_mix": {
+    "headline": "Quick Mix",
+    "badges": ["Built", "Gin", "Highball"],
+    "lines": [
+      "2 oz gin",
+      "4–5 oz quality tonic water",
+      "Build over ice",
+      "Garnish with lime or citrus peel"
+    ]
+  },
+  "editorial_sections": [
+    {
+      "title": "Tonic Is Not Just Filler",
+      "body": "This is where people get lazy. <a href=\"/resources/tonic-matters\">Tonic <span style=\"font-size:12px; opacity:0.6; margin-left:4px;\">↗</span></a> is most of the drink, so if it is too sweet, flat, or dull, the whole thing suffers.\n\nA good tonic keeps the drink crisp and gives the gin something to work with."
+    },
+    {
+      "title": "Choose the Gin on Purpose",
+      "body": "A citrus-forward gin makes the drink brighter. A more herbal gin gives it more depth. Neither is wrong, but they create very different drinks.\n\nThe point is to choose intentionally instead of just grabbing whatever bottle is closest."
+    },
+    {
+      "title": "Ice Still Matters",
+      "body": "A Gin & Tonic should stay cold and lively. If the <a href=\"/resources/ice-matters-in-cocktails\">ice <span style=\"font-size:12px; opacity:0.6; margin-left:4px;\">↗</span></a> melts too quickly, the drink gets watery before you’re halfway through it.\n\nUse plenty of solid ice and build the drink directly in the glass."
+    },
+    {
+      "title": "What a Good Gin & Tonic Should Feel Like",
+      "body": "It should feel crisp, cold, lightly bitter, and refreshing. The gin should still be present, but the tonic should carry the drink without flattening it.\n\nWhen it’s right, it tastes simple in the best possible way."
+    }
+  ],
+  "ingredients": [
+    "2 oz gin",
+    "4–5 oz quality tonic water",
+    "Lime wedge or citrus peel",
+    "Ice"
+  ],
+  "steps": [
+    "Fill a highball glass with plenty of ice.",
+    "Add gin.",
+    "Top with chilled tonic water.",
+    "Stir gently once or twice.",
+    "Garnish with lime or citrus peel."
+  ],
+  "notes": "Use fresh, well-carbonated tonic. If the drink tastes flat or overly sweet, change the tonic before blaming the gin.",
+  "sidebar": {
+    "featured": ["negroni", "martini", "margarita"],
+    "sectionTitle": "More Classic Cocktails"
+  },
+  "related": ["tonic-matters", "ice-matters-in-cocktails", "negroni"]
+}

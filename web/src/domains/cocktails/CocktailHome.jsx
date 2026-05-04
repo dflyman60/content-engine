@@ -1,4 +1,5 @@
 import { getAllCocktailRecipes } from "../../utils/contentLoader";
+import { withCocktailSite } from "./withCocktailSite";
 
 export default function CocktailHome() {
   const recipes = getAllCocktailRecipes();
@@ -14,7 +15,7 @@ export default function CocktailHome() {
         {recipes.map((item) => (
           <a
             key={item.slug}
-            href={`/drinks/${item.slug}`}
+            href={withCocktailSite(`/drinks/${item.slug}`)}
             style={{
               display: "block",
               padding: "20px",

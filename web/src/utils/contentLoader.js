@@ -6,6 +6,10 @@ const cocktailModules = import.meta.glob("@data/cocktails/recipes/*.json", {
   eager: true,
 });
 
+const cocktailResourceModules = import.meta.glob("@data/cocktails/resources/*.json", {
+  eager: true,
+});
+
 export function getAllUapCases() {
   return Object.values(uapModules)
     .map((module) => module.default)
@@ -72,4 +76,14 @@ export function getRelatedCocktailRecipes(currentRecipe, limit = 3) {
   );
 
   return unique.slice(0, limit);
+}
+
+export function getAllCocktailResources() {
+  return Object.values(cocktailResourceModules)
+    .map((module) => module.default)
+    .sort((a, b) => String(a.title || "").localeCompare(String(b.title || "")));
+}
+
+export function getCocktailResourceBySlug(slug) {
+  return getAllCocktailResources().find((item) => item.slug === slug) || null;
 }

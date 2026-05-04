@@ -1,0 +1,32 @@
+{
+  "slug": "ice-matters-in-cocktails",
+  "type": "resource",
+  "title": "Your Ice Is Quietly Ruining Your Drink",
+  "subtitle": "It’s not just about keeping things cold — it’s changing the entire cocktail.",
+  "summary": "Most people don’t think about ice. You grab whatever is in the freezer, toss it in a glass, and move on. But ice is doing more work than almost anything else in your drink.\n\nIt controls temperature, dilution, and how everything comes together. If a cocktail feels too strong, too watery, or just slightly off, there’s a good chance the ice is part of the problem.",
+  "image": "/images/cocktails/resources/ice.jpg",
+  "tags": ["ice", "technique", "fundamentals"],
+  "sections": [
+    {
+      "title": "Ice Is Actively Changing Your Drink",
+      "body": "Ice isn’t just sitting there. It’s melting, adding water, and softening the drink as you stir or shake. That dilution is what brings a cocktail into balance.\n\nWithout enough of it, the drink feels sharp and unfinished. Too much, and it falls apart."
+    },
+    {
+      "title": "Dilution Is the Point",
+      "body": "A lot of people think melting ice is a flaw. It’s not. Controlled dilution is what makes a cocktail taste right.\n\nThe goal isn’t to stop ice from melting — it’s to manage how quickly it does."
+    },
+    {
+      "title": "Size Changes Everything",
+      "body": "Large cubes melt slower, which makes them ideal for drinks like an Old Fashioned or Negroni. Smaller ice increases surface area, which speeds up dilution when you need it.\n\nUsing the wrong ice for the drink changes the entire experience."
+    },
+    {
+      "title": "Clear Ice vs Cloudy Ice",
+      "body": "Clear ice melts more predictably and tends to last longer. Cloudy ice breaks down faster and can dilute unevenly.\n\nIt’s not just about how it looks — it actually affects how the drink holds up over time."
+    },
+    {
+      "title": "Pay Attention to What’s Happening",
+      "body": "If your drink starts too strong and then quickly becomes watery, your ice is likely the issue.\n\nOnce you start paying attention to it, you’ll notice how much it changes everything."
+    }
+  ],
+  "related": ["old-fashioned", "negroni", "whiskey-sour"]
+}

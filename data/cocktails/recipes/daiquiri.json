@@ -1,0 +1,54 @@
+{
+  "slug": "daiquiri",
+  "image": "/images/cocktails/daiquiri.jpg",
+  "title": "How to Make a Daiquiri That Doesn’t Fall Apart",
+  "subtitle": "Simple, sharp, and unforgiving if you get lazy.",
+  "summary": "The Daiquiri is one of the simplest drinks you can make, and somehow one of the easiest to get wrong. It’s just rum, lime, and sugar — nothing to hide behind.\n\nIf you’re off by even a small amount, the whole drink shifts. Too much lime and it’s harsh. Too much sugar and it falls flat. When it’s right, though, it’s one of the cleanest, most refreshing cocktails you can make.",
+  "tags": ["rum", "classic", "shaken", "citrus"],
+  "quick_mix": {
+    "headline": "Quick Mix",
+    "badges": ["Shaken", "Rum", "Classic"],
+    "lines": [
+      "2 oz white rum",
+      "3/4 oz fresh lime juice",
+      "1/2 oz simple syrup",
+      "Shake with ice, strain into a chilled glass"
+    ]
+  },
+  "editorial_sections": [
+    {
+      "title": "This Is Where Ratios Actually Matter",
+      "body": "If you want to understand cocktail balance, make a Daiquiri. There’s nowhere to hide here. Every small change shows up immediately.\n\nThis is the drink that teaches you how much a quarter ounce actually matters."
+    },
+    {
+      "title": "Fresh Lime Is Not Optional",
+      "body": "Bottled lime juice ruins this drink. It flattens everything and takes away the brightness that makes a Daiquiri work.\n\nFresh lime gives it that clean, sharp edge that keeps the drink from feeling heavy."
+    },
+    {
+      "title": "Why Small Adjustments Matter",
+      "body": "A Daiquiri isn’t forgiving. If you push the lime too far, it’s harsh. If you push the sugar too far, it gets dull.\n\nThat’s why starting with a solid ratio matters — and then adjusting slightly based on taste."
+    },
+    {
+      "title": "What a Good Daiquiri Should Feel Like",
+      "body": "It should feel bright, clean, and balanced from the first sip. You should taste the rum, but it shouldn’t overpower the citrus.\n\nWhen it’s right, it’s crisp and refreshing without feeling thin."
+    }
+  ],
+  "ingredients": [
+    "2 oz white rum",
+    "3/4 oz fresh lime juice",
+    "1/2 oz simple syrup",
+    "Ice"
+  ],
+  "steps": [
+    "Add rum, lime juice, and simple syrup to a shaker.",
+    "Fill with ice and shake until well chilled.",
+    "Strain into a chilled coupe or cocktail glass.",
+    "Serve immediately."
+  ],
+  "notes": "If the drink feels too sharp, add a touch more simple syrup. If it feels too sweet, increase the lime slightly. Small adjustments matter here.\n\nGo deeper on balance and ratios in Bar Resources: Most Cocktails Fail Here (And It’s Not the Alcohol) — same backbone this drink lives on.",
+  "related": ["whiskey-sour", "cocktail-balance-and-ratios"],
+  "sidebar": {
+    "sectionTitle": "More Classic Cocktails",
+    "featured": ["whiskey-sour", "negroni", "martini"]
+  }
+}

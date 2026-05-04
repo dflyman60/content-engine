@@ -1,0 +1,24 @@
+{
+  "slug": "kumiko-chicago",
+  "type": "resource",
+  "title": "Kumiko, Chicago",
+  "subtitle": "A quiet, exacting kind of bar in a city that doesn’t always reward quiet.",
+  "summary": "Kumiko is the kind of place you bring when someone says “I want a real drink, not a performance.”\n\nThe work is detail-forward: temperature, texture, and flavor that’s clean enough to read. It’s not about volume or gimmicks—it’s about the kind of control you only get when the team actually cares about the last sip, not the first photo.",
+  "image": "/images/cocktails/bars/kumiko-chicago.jpg",
+  "tags": ["best bars", "cocktail bar", "us"],
+  "sections": [
+    {
+      "title": "Why It Stands Out",
+      "body": "The program is built for people who notice the small things: how a drink opens, how it sits on the palate, and whether the finish is tired or clean.\n\nIt’s not “showy” in the way a lot of modern bars are. The flex is technique you feel in the glass, not on the menu."
+    },
+    {
+      "title": "What to Notice",
+      "body": "The calm pacing. In a great bar, time is part of the build—stirred drinks that aren’t rushed, and service that doesn’t treat precision like a flex for insiders only.\n\nIf you can, sit at the bar. You’ll see the difference in how work is organized, not just what’s in the tin."
+    },
+    {
+      "title": "Before You Go",
+      "body": "This isn’t a “one quick round” bar for every night. You come when you want to pay attention.\n\nIf you’re booking a big group and trying to move fast, you’re going to miss the point. Go smaller, go slower, and let the room do what it’s built for."
+    }
+  ],
+  "related": ["old-fashioned", "negroni"]
+}

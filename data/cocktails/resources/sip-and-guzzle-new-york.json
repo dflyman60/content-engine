@@ -1,0 +1,24 @@
+{
+  "slug": "sip-and-guzzle-new-york",
+  "type": "resource",
+  "title": "Sip & Guzzle, New York",
+  "subtitle": "High-energy New York drinking done with intent—not chaos.",
+  "summary": "Some bars chase spectacle; Sip & Guzzle chases flavor that stands up to the room.\n\nIt’s loud and fast by default in this city, but the cocktails still read clean—balanced enough that you’re tasting structure, not sugar or theatrics. Worth visiting when you want a night out that doesn’t insult your palate.",
+  "image": "/images/cocktails/bars/sip-and-guzzle-new-york.jpg",
+  "tags": ["best bars", "cocktail bar", "us"],
+  "sections": [
+    {
+      "title": "Why It Stands Out",
+      "body": "The program doesn’t treat “fun” and “serious” as opposites. You can get a drink that’s built with care and still feels like a night out—not a lab report.\n\nThe through-line is balance: even the loud ideas are finished, not messy. That’s rarer in a high-volume room than most people admit."
+    },
+    {
+      "title": "What to Notice",
+      "body": "How the team keeps execution tight when the room is full. That’s the real test: not the one perfect pour on a slow Tuesday, but consistency when the night gets away from you.\n\nOrder something spirit-forward, then something brighter. You’ll hear the same attention in both."
+    },
+    {
+      "title": "Before You Go",
+      "body": "If you care about a seat and a calmer first round, plan for it—this is not a “stroll in whenever” kind of place on a Friday.\n\nBring patience for the room, and you’ll be rewarded with drinks that don’t use volume as an excuse to get lazy."
+    }
+  ],
+  "related": ["old-fashioned", "negroni"]
+}

@@ -1,7 +1,30 @@
 {
   "slug": "old-fashioned",
-  "title": "Old Fashioned",
-  "summary": "A timeless whiskey cocktail built around balance, bitters, and a proper pour.",
+  "image": "/images/cocktails/old-fashioned.jpg",
+  "title": "How to Make an Old Fashioned That Actually Works",
+  "summary": "I didn't always appreciate the Old Fashioned the way I do now.\n\nIt's one of those drinks that seems simple at first, but the more time you spend with it, the more you realize how precise it actually is. There's not much to it—which is exactly why every choice matters.\n\nI've had versions that were too sweet, ones that were watered down halfway through, and a few that just didn't feel balanced at all. And for something this straightforward, that always stood out.\n\nWhat changed for me was paying attention to how it's built. The spirit, the dilution, the small details—when they come together the right way, it's obvious immediately.\n\nThis is the version I come back to. It's consistent, it's balanced, and it works whether you're making one at home or putting it in front of someone who knows exactly what it should taste like.",
+  "quick_mix": {
+    "headline": "Stir it cold. Big ice, slow dilution.",
+    "badges": ["Stirred", "Spirit-forward", "~2 min"],
+    "lines": [
+      "Whiskey, bitters, sweetener. Express the peel last—the oils hit the sip, not the air above the glass.",
+      "A large cube keeps water in check; under-stirred reads hot, over-stirred reads thin."
+    ]
+  },
+  "editorial_sections": [
+    {
+      "title": "The Story Behind the Old Fashioned",
+      "body": "The Old Fashioned has been around long enough that people assume it's easy to get right. It isn't.\n\nAt its core, it's just spirit, sugar, bitters, and dilution. That's it. But because there's nowhere to hide, every small decision shows up in the final drink. If it's off, you notice it immediately.\n\nThat's what makes it interesting—and also why it's so often done poorly."
+    },
+    {
+      "title": "Different Ways to Build It",
+      "body": "There's more flexibility here than most people think, but it has to be intentional.\n\nBourbon will give you a softer, slightly sweeter profile. Rye leans drier and a little sharper. You can even move into other spirits, but once you do, you're adjusting the balance—not just swapping ingredients.\n\nThe structure stays the same. The execution is what changes."
+    },
+    {
+      "title": "Why It Still Matters",
+      "body": "What I like about the Old Fashioned is that it rewards attention.\n\nThere's no shortcut here. The way you stir it, the ice you use, even how long it sits before you take the first sip—it all changes the experience.\n\nWhen it's done right, it doesn't need anything extra. It just works."
+    }
+  ],
   "ingredients": [
     "2 oz bourbon or rye whiskey",
     "1/4 oz simple syrup or 1 sugar cube",
@@ -16,7 +39,67 @@
     "Strain over a large ice cube.",
     "Express orange peel over the drink and garnish."
   ],
-  "notes": "Use rye for a spicier profile or bourbon for a rounder, sweeter drink.",
+  "notes": "Rye reads drier and sharper on the palate, so the drink holds more structure; bourbon softens the edges and carries sweetness forward. Same build—shift the sweetener or bitters slightly if you swap base spirits.",
   "tags": ["whiskey", "classic", "stirred", "strong"],
-  "related": ["whiskey-sour"]
+  "related": ["whiskey-sour"],
+  "sidebar": {
+    "about": {
+      "title": "About",
+      "text": "Velvet Pour recipes are written for home bartenders who care about balance and repeatability. Use the sidebar for tools, inspiration, and other drinks in the same lane."
+    },
+    "sections": {
+      "bar_resources": [
+        {
+          "title": "Your Gin & Tonic Is Only As Good As Your Tonic",
+          "href": "/resources/tonic-matters",
+          "text": "Tonic carries most of the drink — pick it on purpose, not as an afterthought."
+        },
+        {
+          "title": "You Don’t Need 15 Tools (Just These for Stirred Drinks)",
+          "href": "/resources/essential-tools-for-stirred-cocktails",
+          "text": "Mixing glass, barspoon, and a strainer you trust."
+        },
+        {
+          "title": "Your Ice Is Quietly Ruining Your Drink",
+          "href": "/resources/ice-matters-in-cocktails",
+          "text": "Dilution and temperature in one variable."
+        }
+      ],
+      "best_bars": [
+        {
+          "title": "Sip & Guzzle, New York",
+          "href": "/resources/sip-and-guzzle-new-york",
+          "text": "High energy, clean structure—flavor that survives a loud room."
+        },
+        {
+          "title": "Jewel of the South, New Orleans",
+          "href": "/resources/jewel-of-the-south-new-orleans",
+          "text": "Southern hospitality with a bar that still demands precision."
+        },
+        {
+          "title": "Kumiko, Chicago",
+          "href": "/resources/kumiko-chicago",
+          "text": "Detail-forward drinks and calm pacing in a city that doesn’t always reward quiet."
+        }
+      ],
+      "latest_reviews": [
+        {
+          "title": "Best Mixing Glasses for Home Bars",
+          "href": "#",
+          "text": "Weight, pour lip, and cleanup."
+        },
+        {
+          "title": "Large Ice Molds Worth Buying",
+          "href": "#",
+          "text": "Clear vs cloudy and release ease."
+        },
+        {
+          "title": "Bitters Every Home Bar Should Own",
+          "href": "#",
+          "text": "A short list that still covers range."
+        }
+      ]
+    },
+    "featured": ["whiskey-sour", "negroni", "margarita"]
+  }
 }
