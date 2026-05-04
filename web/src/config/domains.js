@@ -30,6 +30,16 @@ function resolveSiteFromQuery() {
 export function getDomainConfig() {
   const hostname = window.location.hostname.toLowerCase();
 
+  // Velvet Pour production: apex, www, and any subdomain of velvetpour.bar
+  if (hostname === "velvetpour.bar" || hostname.endsWith(".velvetpour.bar")) {
+    return DOMAIN_CONFIG.cocktails;
+  }
+
+  // UAP production hostnames
+  if (hostname === "uapcases.com" || hostname === "www.uapcases.com") {
+    return DOMAIN_CONFIG.uap;
+  }
+
   for (const config of Object.values(DOMAIN_CONFIG)) {
     if (config.hostnames.includes(hostname)) {
       return config;
