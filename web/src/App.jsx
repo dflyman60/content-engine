@@ -103,7 +103,7 @@ export default function App() {
   if (route.site.key === "cocktails") {
     return (
       <CocktailLayout>
-        {route.type === "home" && <HomePage />}
+        {route.type === "cocktails_home" && <HomePage />}
         {route.type === "cocktails_index" && <CocktailsIndexPage />}
         {route.type === "resources_index" && <ResourcesIndexPage />}
         {route.type === "bars_index" && <BarsIndexPage />}

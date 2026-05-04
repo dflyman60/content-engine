@@ -5,6 +5,9 @@ export function resolveCurrentRoute() {
   const path = window.location.pathname.replace(/\/$/, "") || "/";
 
   if (path === "/") {
+    if (site.key === "cocktails") {
+      return { site, type: "cocktails_home", slug: null };
+    }
     return { site, type: "home", slug: null };
   }
 
