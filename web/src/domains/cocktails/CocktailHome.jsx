@@ -1,5 +1,6 @@
 import { getAllCocktailRecipes } from "../../utils/contentLoader";
 import { withCocktailSite } from "./withCocktailSite";
+import { trackEvent } from "@/lib/analytics";
 
 export default function CocktailHome() {
   const recipes = getAllCocktailRecipes();
@@ -16,6 +17,17 @@ export default function CocktailHome() {
           <a
             key={item.slug}
             href={withCocktailSite(`/drinks/${item.slug}`)}
+            onClick={() =>
+              trackEvent("recipe_click", {
+                recipe_name: item.title || item.slug,
+                target_title: item.title || item.slug,
+                target_path: `/drinks/${item.slug}`,
+                content_type: "recipe",
+                category: Array.isArray(item?.tags) && item.tags.length > 0 ? String(item.tags[0]) : "cocktails",
+                location: "list",
+                click_location: "list",
+              })
+            }
             style={{
               display: "block",
               padding: "20px",

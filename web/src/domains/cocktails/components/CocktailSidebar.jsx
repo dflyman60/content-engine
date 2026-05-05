@@ -4,6 +4,7 @@ import {
   getRelatedCocktailRecipes,
 } from "../../../utils/contentLoader";
 import { withCocktailSite } from "../withCocktailSite";
+import { trackEvent } from "@/lib/analytics";
 
 const velvet = {
   fontBody: '"Roboto", sans-serif',
@@ -402,6 +403,17 @@ function LinkListCard({ title, items, marginBottom = SIDEBAR_SECTION_GAP }) {
             <div style={{ minWidth: 0, flex: 1 }}>
               <a
                 href={withCocktailSite(item.href)}
+                onClick={() => {
+                  trackEvent("recipe_click", {
+                    recipe_name: item.title || item.href,
+                    target_title: item.title || item.href,
+                    target_path: item.href || "",
+                    content_type: String(item.href || "").startsWith("/drinks/") ? "recipe" : "resource",
+                    category: title,
+                    location: "list",
+                    click_location: "related",
+                  });
+                }}
                 style={{
                   display: "block",
                   fontSize: "12px",
@@ -465,6 +477,17 @@ function ReviewsCard({ title, items }) {
             <SidebarRowThumb src={item.thumbSrc} />
             <a
               href={withCocktailSite(item.href)}
+              onClick={() => {
+                trackEvent("recipe_click", {
+                  recipe_name: item.title || item.href,
+                  target_title: item.title || item.href,
+                  target_path: item.href || "",
+                  content_type: String(item.href || "").startsWith("/drinks/") ? "recipe" : "resource",
+                  category: title,
+                  location: "list",
+                  click_location: "related",
+                });
+              }}
               style={{
                 flex: "1",
                 minWidth: 0,
@@ -574,6 +597,20 @@ function CocktailRecipesCard({ recipes }) {
                 <div style={{ minWidth: 0, flex: 1 }}>
                   <a
                     href={withCocktailSite(`/drinks/${slug}`)}
+                    onClick={() =>
+                      trackEvent("recipe_click", {
+                        recipe_name: title || slug,
+                        target_title: title || slug,
+                        target_path: `/drinks/${slug}`,
+                        content_type: "recipe",
+                        category:
+                          Array.isArray(item?.tags) && item.tags.length > 0
+                            ? String(item.tags[0])
+                            : "cocktails",
+                        location: "list",
+                        click_location: "related",
+                      })
+                    }
                     style={{
                       display: "block",
                       fontSize: "12px",

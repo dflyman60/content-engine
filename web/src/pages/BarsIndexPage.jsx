@@ -1,5 +1,6 @@
 import { getAllCocktailResources } from "../utils/contentLoader";
 import { withCocktailSite } from "../domains/cocktails/withCocktailSite";
+import { trackEvent } from "@/lib/analytics";
 
 const fontHeading = '"Raleway", sans-serif';
 const fontBody = '"Roboto", sans-serif';
@@ -24,6 +25,11 @@ function summarySnippet(text, max = 130) {
   if (text == null) return "";
   const first = String(text).split(/\n\s*\n/)[0].trim();
   return first.length > max ? `${first.slice(0, max).trim()}…` : first;
+}
+
+function primaryCategory(item) {
+  const tags = Array.isArray(item?.tags) ? item.tags : [];
+  return tags.length > 0 ? String(tags[0]) : "best bars";
 }
 
 export default function BarsIndexPage() {
@@ -106,6 +112,17 @@ export default function BarsIndexPage() {
               <a
                 key={item.slug}
                 href={withCocktailSite(`/resources/${item.slug}`)}
+                onClick={() =>
+                  trackEvent("recipe_click", {
+                    recipe_name: item.title || item.slug,
+                    target_title: item.title || item.slug,
+                    target_path: `/resources/${item.slug}`,
+                    content_type: "recipe",
+                    category: primaryCategory(item),
+                    location: "list",
+                    click_location: "list",
+                  })
+                }
                 style={{
                   display: "block",
                   textDecoration: "none",

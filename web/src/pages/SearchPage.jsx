@@ -1,5 +1,6 @@
 import { searchContent } from "../utils/searchContent";
 import { withCocktailSite } from "../domains/cocktails/withCocktailSite";
+import { trackEvent } from "@/lib/analytics";
 
 const fontHeading = '"Raleway", sans-serif';
 const fontBody = '"Roboto", sans-serif';
@@ -24,6 +25,17 @@ function ResultRow({ item }) {
   return (
     <a
       href={withCocktailSite(item.href)}
+      onClick={() =>
+        trackEvent("recipe_click", {
+          recipe_name: item.title || item.slug,
+          target_title: item.title || item.slug,
+          target_path: item.href,
+          content_type: "recipe",
+          category: item.type === "bar" ? "best bars" : item.type,
+          location: "list",
+          click_location: "list",
+        })
+      }
       style={{
         display: "block",
         textDecoration: "none",

@@ -3,6 +3,7 @@ import {
   getAllCocktailResources,
 } from "../utils/contentLoader";
 import { withCocktailSite } from "../domains/cocktails/withCocktailSite";
+import { trackEvent } from "@/lib/analytics";
 
 const fontHeading = '"Raleway", sans-serif';
 const fontBody = '"Roboto", sans-serif';
@@ -20,6 +21,11 @@ function getRecipeImage(item) {
   if (raw == null) return null;
   const s = typeof raw === "string" ? raw.trim() : "";
   return s.length > 0 ? s : null;
+}
+
+function primaryCategory(item) {
+  const tags = Array.isArray(item?.tags) ? item.tags : [];
+  return tags.length > 0 ? String(tags[0]) : "cocktails";
 }
 
 export default function HomePage() {
@@ -170,7 +176,21 @@ export default function HomePage() {
               body: "U.S. bars worth the trip—atmosphere and execution, briefly noted.",
             },
           ].map((block) => (
-            <a key={block.key} href={withCocktailSite(block.href)} className="vp-home-pillar">
+            <a
+              key={block.key}
+              href={withCocktailSite(block.href)}
+              className="vp-home-pillar"
+              onClick={() =>
+                trackEvent("cta_click", {
+                  cta_name: block.title,
+                  target_title: block.title,
+                  target_path: block.href,
+                  content_type: "navigation",
+                  category: "navigation",
+                  click_location: "homepage",
+                })
+              }
+            >
               <h2
                 style={{
                   fontFamily: fontHeading,
@@ -259,6 +279,17 @@ export default function HomePage() {
               <a
                 key={item.slug}
                 href={withCocktailSite(`/drinks/${item.slug}`)}
+                onClick={() =>
+                  trackEvent("recipe_click", {
+                    recipe_name: item.title || item.slug,
+                    target_title: item.title || item.slug,
+                    target_path: `/drinks/${item.slug}`,
+                    content_type: "recipe",
+                    category: primaryCategory(item),
+                    location: "homepage",
+                    click_location: "homepage",
+                  })
+                }
                 style={{
                   display: "block",
                   textDecoration: "none",
@@ -348,6 +379,17 @@ export default function HomePage() {
             <li key={r.slug} style={{ marginBottom: "10px" }}>
               <a
                 href={withCocktailSite(`/resources/${r.slug}`)}
+                onClick={() =>
+                  trackEvent("recipe_click", {
+                    recipe_name: r.title || r.slug,
+                    target_title: r.title || r.slug,
+                    target_path: `/resources/${r.slug}`,
+                    content_type: "recipe",
+                    category: primaryCategory(r),
+                    location: "homepage",
+                    click_location: "homepage",
+                  })
+                }
                 style={{
                   color: "#2563eb",
                   textDecoration: "none",

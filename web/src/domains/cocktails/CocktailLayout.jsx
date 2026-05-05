@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { withCocktailSite } from "./withCocktailSite";
+import { trackEvent } from "@/lib/analytics";
 
 function readInitialSearchDraft() {
   try {
@@ -160,16 +161,69 @@ export default function CocktailLayout({ children }) {
       <header className="vp-cocktail-header">
         <div className="vp-cocktail-header-inner">
           <div className="vp-nav-brand">
-            <a href={homeHref}>Velvet Pour</a>
+            <a
+              href={homeHref}
+              onClick={() =>
+                trackEvent("nav_click", {
+                  nav_item: "Velvet Pour",
+                  target_title: "Velvet Pour",
+                  target_path: homeHref,
+                  content_type: "navigation",
+                  category: "navigation",
+                  click_location: "header",
+                })
+              }
+            >
+              Velvet Pour
+            </a>
           </div>
           <nav className="vp-nav-center" aria-label="Primary">
-            <a className="vp-nav-link" href={withCocktailSite("/cocktails")}>
+            <a
+              className="vp-nav-link"
+              href={withCocktailSite("/cocktails")}
+              onClick={() =>
+                trackEvent("nav_click", {
+                  nav_item: "Cocktails",
+                  target_title: "Cocktails",
+                  target_path: "/cocktails",
+                  content_type: "navigation",
+                  category: "navigation",
+                  click_location: "header",
+                })
+              }
+            >
               Cocktails
             </a>
-            <a className="vp-nav-link" href={withCocktailSite("/resources")}>
+            <a
+              className="vp-nav-link"
+              href={withCocktailSite("/resources")}
+              onClick={() =>
+                trackEvent("nav_click", {
+                  nav_item: "Bar Resources",
+                  target_title: "Bar Resources",
+                  target_path: "/resources",
+                  content_type: "navigation",
+                  category: "navigation",
+                  click_location: "header",
+                })
+              }
+            >
               Bar Resources
             </a>
-            <a className="vp-nav-link" href={withCocktailSite("/bars")}>
+            <a
+              className="vp-nav-link"
+              href={withCocktailSite("/bars")}
+              onClick={() =>
+                trackEvent("nav_click", {
+                  nav_item: "Best Bars",
+                  target_title: "Best Bars",
+                  target_path: "/bars",
+                  content_type: "navigation",
+                  category: "navigation",
+                  click_location: "header",
+                })
+              }
+            >
               Best Bars
             </a>
           </nav>

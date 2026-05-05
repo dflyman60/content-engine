@@ -6,6 +6,7 @@ import {
 } from "../../utils/contentLoader";
 import CocktailSidebar from "./components/CocktailSidebar";
 import { withCocktailSite } from "./withCocktailSite";
+import { trackEvent } from "@/lib/analytics";
 
 const velvet = {
   fontHeading: '"Raleway", sans-serif',
@@ -48,6 +49,16 @@ function getHeroImageSrc(data) {
 
 function safeArr(v) {
   return Array.isArray(v) ? v : [];
+}
+
+function isOutboundHref(href) {
+  if (!href || !/^https?:\/\//i.test(href)) return false;
+  try {
+    const target = new URL(href, window.location.origin);
+    return target.hostname !== window.location.hostname;
+  } catch {
+    return false;
+  }
 }
 
 function editorialParagraphs(body) {
@@ -247,6 +258,20 @@ export default function CocktailResourcePage({ slug }) {
 
   return (
     <main
+      onClickCapture={(e) => {
+        const anchor = e.target.closest ? e.target.closest("a[href]") : null;
+        if (!anchor) return;
+        const href = anchor.getAttribute("href") || "";
+        if (isOutboundHref(href)) {
+          trackEvent("outbound_click", {
+            target_title: anchor.textContent?.trim() || href,
+            target_path: href,
+            content_type: "external",
+            category: "external",
+            click_location: "article",
+          });
+        }
+      }}
       style={{
         minHeight: "100vh",
         position: "relative",
@@ -323,6 +348,16 @@ export default function CocktailResourcePage({ slug }) {
         >
           <a
             href={categoryBackHref}
+            onClick={() =>
+              trackEvent("nav_click", {
+                nav_item: String(categoryBackLabel || "Back").replace(/^←\s*/, ""),
+                target_title: String(categoryBackLabel || "Back").replace(/^←\s*/, ""),
+                target_path: isBestBarPage ? "/bars" : "/resources",
+                content_type: "navigation",
+                category: "navigation",
+                click_location: "header",
+              })
+            }
             style={{
               color: "#fff",
               textDecoration: "none",
@@ -571,6 +606,21 @@ export default function CocktailResourcePage({ slug }) {
                     <a
                       key={item.slug}
                       href={withCocktailSite(`/drinks/${item.slug}`)}
+                      onClick={() =>
+                        trackEvent("next_article_click", {
+                          current_article: data.title ?? slug,
+                          current_title: data.title ?? slug,
+                          next_article: item.title ?? item.slug,
+                          target_title: item.title ?? item.slug,
+                          target_path: `/drinks/${item.slug}`,
+                          content_type: "recipe",
+                          category:
+                            Array.isArray(item?.tags) && item.tags.length > 0
+                              ? String(item.tags[0])
+                              : "cocktails",
+                          click_location: "related",
+                        })
+                      }
                       style={{
                         display: "block",
                         padding: "16px 18px",
