@@ -174,6 +174,126 @@ function editorialParagraphs(body) {
     .filter(Boolean);
 }
 
+const manhattanSeoHeading = {
+  fontFamily: velvet.fontHeading,
+  fontSize: "24px",
+  fontWeight: 600,
+  margin: "0 0 12px",
+  color: velvet.text,
+  lineHeight: 1.25,
+  letterSpacing: "-0.02em",
+};
+
+const manhattanSeoBody = {
+  margin: "0 0 1em",
+  fontSize: "17px",
+  lineHeight: "1.75",
+  color: "#333",
+  fontWeight: 300,
+  fontFamily: velvet.fontBody,
+};
+
+function ManhattanSeoSections() {
+  return (
+    <div
+      style={{
+        marginBottom: "44px",
+        maxWidth: velvet.proseMax,
+      }}
+    >
+      <article style={{ marginTop: 0 }}>
+        <h2 style={manhattanSeoHeading}>Ingredients</h2>
+        <ul
+          style={{
+            margin: "0 0 28px",
+            paddingLeft: "1.25em",
+            fontSize: "17px",
+            lineHeight: 1.75,
+            color: "#333",
+            fontWeight: 300,
+            fontFamily: velvet.fontBody,
+          }}
+        >
+          <li style={{ marginBottom: "0.35em" }}>Bourbon or Rye</li>
+          <li style={{ marginBottom: "0.35em" }}>Sweet Vermouth</li>
+          <li style={{ marginBottom: 0 }}>Angostura bitters</li>
+        </ul>
+      </article>
+
+      <article style={{ marginTop: "34px", paddingTop: "28px", borderTop: "1px solid #eee" }}>
+        <h2 style={manhattanSeoHeading}>How to Make a Manhattan</h2>
+        <ol
+          style={{
+            margin: "0 0 28px",
+            paddingLeft: "1.25em",
+            fontSize: "17px",
+            lineHeight: 1.75,
+            color: "#333",
+            fontWeight: 300,
+            fontFamily: velvet.fontBody,
+          }}
+        >
+          <li style={{ marginBottom: "0.5em" }}>
+            Add whiskey, sweet vermouth, and bitters to a mixing glass.
+          </li>
+          <li style={{ marginBottom: "0.5em" }}>Fill with ice and stir until chilled and diluted.</li>
+          <li style={{ marginBottom: "0.5em" }}>Strain into a chilled coupe or cocktail glass.</li>
+          <li style={{ marginBottom: 0 }}>Garnish with a cherry.</li>
+        </ol>
+      </article>
+
+      <article style={{ marginTop: "34px", paddingTop: "28px", borderTop: "1px solid #eee" }}>
+        <h2 style={manhattanSeoHeading}>Best Whiskey for a Manhattan</h2>
+        <p style={{ ...manhattanSeoBody, marginBottom: "1em" }}>
+          Rye whiskey keeps the drink drier and spicier; bourbon rounds it out with softer,
+          sweeter notes. Pick one deliberately—the spirit leads the glass.
+        </p>
+        <p style={{ ...manhattanSeoBody, marginBottom: 0 }}>
+          Alongside the Manhattan, explore the{" "}
+          <a
+            href={withCocktailSite("/drinks/old-fashioned")}
+            style={{ color: velvet.linkBlue, fontWeight: 500, textDecoration: "none" }}
+          >
+            Old Fashioned cocktail
+          </a>{" "}
+          for another whiskey-forward classic, or the{" "}
+          <a
+            href={withCocktailSite("/drinks/negroni")}
+            style={{ color: velvet.linkBlue, fontWeight: 500, textDecoration: "none" }}
+          >
+            Negroni cocktail
+          </a>{" "}
+          for a Campari-led stirred template.
+        </p>
+      </article>
+
+      <article style={{ marginTop: "34px", paddingTop: "28px", borderTop: "1px solid #eee" }}>
+        <h2 style={manhattanSeoHeading}>Manhattan Variations</h2>
+        <ul
+          style={{
+            margin: 0,
+            paddingLeft: "1.25em",
+            fontSize: "17px",
+            lineHeight: 1.75,
+            color: "#333",
+            fontWeight: 300,
+            fontFamily: velvet.fontBody,
+          }}
+        >
+          <li style={{ marginBottom: "0.35em" }}>
+            <strong style={{ fontWeight: 500, color: velvet.text }}>Perfect Manhattan</strong>
+            — splits sweet and dry vermouth for a middle-ground profile.
+          </li>
+          <li style={{ marginBottom: 0 }}>
+            <strong style={{ fontWeight: 500, color: velvet.text }}>Dry Manhattan</strong>
+            — uses dry vermouth instead of sweet for a leaner, more aromatic sip.
+          </li>
+        </ul>
+      </article>
+    </div>
+  );
+}
+
 function AdSlot({ label }) {
   return (
     <div
@@ -798,7 +918,7 @@ export default function CocktailRecipePage({ slug }) {
                     color: velvet.text,
                   }}
                 >
-                  {data.title ?? "Cocktail"}
+                  {slug === "manhattan" ? "Manhattan Cocktail Recipe" : data.title ?? "Cocktail"}
                 </h1>
                 {hasSummary && (
                   <p
@@ -841,9 +961,11 @@ export default function CocktailRecipePage({ slug }) {
                   <img
                     src={heroSrc}
                     alt={
-                      data.title
-                        ? `${data.title} — featured image`
-                        : "Recipe featured image"
+                      slug === "manhattan"
+                        ? "Manhattan cocktail in a coupe glass"
+                        : data.title
+                          ? `${data.title} — featured image`
+                          : "Recipe featured image"
                     }
                     loading="eager"
                     decoding="async"
@@ -1209,6 +1331,8 @@ export default function CocktailRecipePage({ slug }) {
             )}
 
             <AdSlot label="Affiliate slot — bar tools / glassware" />
+
+            {slug === "manhattan" ? <ManhattanSeoSections /> : null}
 
             {/* Recipe card — primary destination, printable, light */}
             <section

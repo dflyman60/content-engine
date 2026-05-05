@@ -38,10 +38,16 @@ export default function App() {
 
     if (route.type === "recipe" && route.slug && route.site.key === "cocktails") {
       const recipe = getCocktailRecipeBySlug(route.slug);
-      title = recipe ? `${recipe.title} | Velvet Pour` : "Velvet Pour";
-      description =
-        recipe?.summary ||
-        "Award-inspired cocktails, techniques, and home bar guidance.";
+      if (route.slug === "manhattan") {
+        title = "Manhattan Cocktail Recipe (Classic, Easy & Perfect Ratio)";
+        description =
+          "Learn how to make a classic Manhattan cocktail with the perfect whiskey-to-vermouth ratio. Simple recipe, tips, and variations.";
+      } else {
+        title = recipe ? `${recipe.title} | Velvet Pour` : "Velvet Pour";
+        description =
+          recipe?.summary ||
+          "Award-inspired cocktails, techniques, and home bar guidance.";
+      }
     } else if (route.type === "resource" && route.slug && route.site.key === "cocktails") {
       const resource = getCocktailResourceBySlug(route.slug);
       title = resource ? `${resource.title} | Velvet Pour` : "Velvet Pour";
@@ -98,6 +104,26 @@ export default function App() {
     }
 
     meta.setAttribute("content", description);
+
+    const canonicalExisting = document.querySelector('link[rel="canonical"]');
+    const isManhattanRecipe =
+      route.type === "recipe" &&
+      route.slug === "manhattan" &&
+      route.site.key === "cocktails";
+    if (isManhattanRecipe) {
+      let canonical = canonicalExisting;
+      if (!canonical) {
+        canonical = document.createElement("link");
+        canonical.rel = "canonical";
+        document.head.appendChild(canonical);
+      }
+      canonical.setAttribute(
+        "href",
+        "https://www.velvetpour.bar/drinks/manhattan",
+      );
+    } else if (canonicalExisting) {
+      canonicalExisting.remove();
+    }
   }, [route]);
 
   if (route.site.key === "cocktails") {
