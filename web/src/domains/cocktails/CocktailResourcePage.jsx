@@ -267,7 +267,7 @@ export default function CocktailResourcePage({ slug }) {
             target_title: anchor.textContent?.trim() || href,
             target_path: href,
             content_type: "external",
-            category: "external",
+            content_category: "external",
             click_location: "article",
           });
         }
@@ -354,7 +354,7 @@ export default function CocktailResourcePage({ slug }) {
                 target_title: String(categoryBackLabel || "Back").replace(/^←\s*/, ""),
                 target_path: isBestBarPage ? "/bars" : "/resources",
                 content_type: "navigation",
-                category: "navigation",
+                content_category: "navigation",
                 click_location: "header",
               })
             }
@@ -614,10 +614,7 @@ export default function CocktailResourcePage({ slug }) {
                           target_title: item.title ?? item.slug,
                           target_path: `/drinks/${item.slug}`,
                           content_type: "recipe",
-                          category:
-                            Array.isArray(item?.tags) && item.tags.length > 0
-                              ? String(item.tags[0])
-                              : "cocktails",
+                          content_category: isBestBarPage ? "bars" : "resources",
                           click_location: "related",
                         })
                       }

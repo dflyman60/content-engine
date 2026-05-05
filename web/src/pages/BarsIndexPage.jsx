@@ -29,7 +29,7 @@ function summarySnippet(text, max = 130) {
 
 function primaryCategory(item) {
   const tags = Array.isArray(item?.tags) ? item.tags : [];
-  return tags.length > 0 ? String(tags[0]) : "best bars";
+  return tags.length > 0 ? String(tags[0]) : undefined;
 }
 
 export default function BarsIndexPage() {
@@ -118,7 +118,8 @@ export default function BarsIndexPage() {
                     target_title: item.title || item.slug,
                     target_path: `/resources/${item.slug}`,
                     content_type: "recipe",
-                    category: primaryCategory(item),
+                    content_category: "bars",
+                    recipe_type: primaryCategory(item),
                     location: "list",
                     click_location: "list",
                   })

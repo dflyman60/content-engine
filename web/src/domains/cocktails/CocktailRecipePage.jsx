@@ -419,7 +419,7 @@ export default function CocktailRecipePage({ slug }) {
             target_title: anchor.textContent?.trim() || href,
             target_path: href,
             content_type: "external",
-            category: "external",
+            content_category: "external",
             click_location: "article",
           });
         }
@@ -742,7 +742,7 @@ export default function CocktailRecipePage({ slug }) {
                 target_title: "Cocktails",
                 target_path: "/cocktails",
                 content_type: "navigation",
-                category: "navigation",
+                content_category: "navigation",
                 click_location: "header",
               })
             }
@@ -960,7 +960,7 @@ export default function CocktailRecipePage({ slug }) {
                     target_title: "Jump to Recipe",
                     target_path: "#recipe",
                     content_type: "navigation",
-                    category: "engagement",
+                    content_category: "engagement",
                     click_location: "article",
                   })
                 }
@@ -1370,10 +1370,7 @@ export default function CocktailRecipePage({ slug }) {
                                 target_title: item.title ?? item.key,
                                 target_path: item.href,
                                 content_type: "recipe",
-                                category:
-                                  Array.isArray(data?.tags) && data.tags.length > 0
-                                    ? String(data.tags[0])
-                                    : "cocktails",
+                                content_category: "cocktails",
                                 click_location: "related",
                               })
                             }
@@ -1471,10 +1468,7 @@ export default function CocktailRecipePage({ slug }) {
                             target_title: item.title ?? item.slug,
                             target_path: `/drinks/${item.slug}`,
                             content_type: "recipe",
-                            category:
-                              Array.isArray(item?.tags) && item.tags.length > 0
-                                ? String(item.tags[0])
-                                : "cocktails",
+                            content_category: "cocktails",
                             click_location: "related",
                           })
                         }

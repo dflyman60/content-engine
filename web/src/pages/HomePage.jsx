@@ -24,8 +24,14 @@ function getRecipeImage(item) {
 }
 
 function primaryCategory(item) {
+  return (item?.tags || []).some((t) => String(t).toLowerCase() === "best bars")
+    ? "bars"
+    : "resources";
+}
+
+function recipeType(item) {
   const tags = Array.isArray(item?.tags) ? item.tags : [];
-  return tags.length > 0 ? String(tags[0]) : "cocktails";
+  return tags.length > 0 ? String(tags[0]) : undefined;
 }
 
 export default function HomePage() {
@@ -186,7 +192,7 @@ export default function HomePage() {
                   target_title: block.title,
                   target_path: block.href,
                   content_type: "navigation",
-                  category: "navigation",
+                  content_category: "navigation",
                   click_location: "homepage",
                 })
               }
@@ -285,7 +291,8 @@ export default function HomePage() {
                     target_title: item.title || item.slug,
                     target_path: `/drinks/${item.slug}`,
                     content_type: "recipe",
-                    category: primaryCategory(item),
+                    content_category: "cocktails",
+                    recipe_type: recipeType(item),
                     location: "homepage",
                     click_location: "homepage",
                   })
@@ -385,7 +392,8 @@ export default function HomePage() {
                     target_title: r.title || r.slug,
                     target_path: `/resources/${r.slug}`,
                     content_type: "recipe",
-                    category: primaryCategory(r),
+                    content_category: primaryCategory(r),
+                    recipe_type: recipeType(r),
                     location: "homepage",
                     click_location: "homepage",
                   })

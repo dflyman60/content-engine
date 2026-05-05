@@ -23,7 +23,11 @@ export default function CocktailHome() {
                 target_title: item.title || item.slug,
                 target_path: `/drinks/${item.slug}`,
                 content_type: "recipe",
-                category: Array.isArray(item?.tags) && item.tags.length > 0 ? String(item.tags[0]) : "cocktails",
+                content_category: "cocktails",
+                recipe_type:
+                  Array.isArray(item?.tags) && item.tags.length > 0
+                    ? String(item.tags[0])
+                    : undefined,
                 location: "list",
                 click_location: "list",
               })

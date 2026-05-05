@@ -409,7 +409,13 @@ function LinkListCard({ title, items, marginBottom = SIDEBAR_SECTION_GAP }) {
                     target_title: item.title || item.href,
                     target_path: item.href || "",
                     content_type: String(item.href || "").startsWith("/drinks/") ? "recipe" : "resource",
-                    category: title,
+                    content_category:
+                      title === "Best Cocktail Bars in the U.S."
+                        ? "bars"
+                        : title === "Bar Resources"
+                          ? "resources"
+                          : "cocktails",
+                    recipe_type: undefined,
                     location: "list",
                     click_location: "related",
                   });
@@ -483,7 +489,13 @@ function ReviewsCard({ title, items }) {
                   target_title: item.title || item.href,
                   target_path: item.href || "",
                   content_type: String(item.href || "").startsWith("/drinks/") ? "recipe" : "resource",
-                  category: title,
+                  content_category:
+                    title === "Best Cocktail Bars in the U.S."
+                      ? "bars"
+                      : title === "Bar Resources"
+                        ? "resources"
+                        : "cocktails",
+                  recipe_type: undefined,
                   location: "list",
                   click_location: "related",
                 });
@@ -603,10 +615,11 @@ function CocktailRecipesCard({ recipes }) {
                         target_title: title || slug,
                         target_path: `/drinks/${slug}`,
                         content_type: "recipe",
-                        category:
+                        content_category: "cocktails",
+                        recipe_type:
                           Array.isArray(item?.tags) && item.tags.length > 0
                             ? String(item.tags[0])
-                            : "cocktails",
+                            : undefined,
                         location: "list",
                         click_location: "related",
                       })

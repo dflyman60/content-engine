@@ -26,7 +26,7 @@ function summarySnippet(text, max = 140) {
 
 function primaryCategory(item) {
   const tags = Array.isArray(item?.tags) ? item.tags : [];
-  return tags.length > 0 ? String(tags[0]) : "cocktails";
+  return tags.length > 0 ? String(tags[0]) : undefined;
 }
 
 export default function CocktailsIndexPage() {
@@ -111,7 +111,8 @@ export default function CocktailsIndexPage() {
                     target_title: item.title || item.slug,
                     target_path: `/drinks/${item.slug}`,
                     content_type: "recipe",
-                    category: primaryCategory(item),
+                    content_category: "cocktails",
+                    recipe_type: primaryCategory(item),
                     location: "list",
                     click_location: "list",
                   })

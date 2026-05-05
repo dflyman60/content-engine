@@ -31,7 +31,13 @@ function ResultRow({ item }) {
           target_title: item.title || item.slug,
           target_path: item.href,
           content_type: "recipe",
-          category: item.type === "bar" ? "best bars" : item.type,
+          content_category:
+            item.type === "cocktail"
+              ? "cocktails"
+              : item.type === "bar"
+                ? "bars"
+                : "resources",
+          recipe_type: undefined,
           location: "list",
           click_location: "list",
         })

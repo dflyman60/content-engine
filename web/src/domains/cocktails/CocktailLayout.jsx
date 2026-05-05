@@ -169,7 +169,7 @@ export default function CocktailLayout({ children }) {
                   target_title: "Velvet Pour",
                   target_path: homeHref,
                   content_type: "navigation",
-                  category: "navigation",
+                  content_category: "navigation",
                   click_location: "header",
                 })
               }
@@ -187,7 +187,7 @@ export default function CocktailLayout({ children }) {
                   target_title: "Cocktails",
                   target_path: "/cocktails",
                   content_type: "navigation",
-                  category: "navigation",
+                  content_category: "navigation",
                   click_location: "header",
                 })
               }
@@ -203,7 +203,7 @@ export default function CocktailLayout({ children }) {
                   target_title: "Bar Resources",
                   target_path: "/resources",
                   content_type: "navigation",
-                  category: "navigation",
+                  content_category: "navigation",
                   click_location: "header",
                 })
               }
@@ -219,7 +219,7 @@ export default function CocktailLayout({ children }) {
                   target_title: "Best Bars",
                   target_path: "/bars",
                   content_type: "navigation",
-                  category: "navigation",
+                  content_category: "navigation",
                   click_location: "header",
                 })
               }
