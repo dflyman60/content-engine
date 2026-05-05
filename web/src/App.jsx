@@ -20,6 +20,12 @@ import ResourcesIndexPage from "./pages/ResourcesIndexPage";
 import BarsIndexPage from "./pages/BarsIndexPage";
 import SearchPage from "./pages/SearchPage";
 
+import {
+  buildCocktailRecipeDocumentTitle,
+  buildCocktailRecipeMetaDescription,
+  cocktailRecipeCanonicalHref,
+} from "./domains/cocktails/recipePageSeo";
+
 function NotFound() {
   return (
     <main style={{ padding: "40px", fontFamily: "system-ui" }}>
@@ -38,14 +44,12 @@ export default function App() {
 
     if (route.type === "recipe" && route.slug && route.site.key === "cocktails") {
       const recipe = getCocktailRecipeBySlug(route.slug);
-      if (route.slug === "manhattan") {
-        title = "Manhattan Cocktail Recipe (Classic, Easy & Perfect Ratio)";
-        description =
-          "Learn how to make a classic Manhattan cocktail with the perfect whiskey-to-vermouth ratio. Simple recipe, tips, and variations.";
+      if (recipe) {
+        title = buildCocktailRecipeDocumentTitle(recipe);
+        description = buildCocktailRecipeMetaDescription(recipe);
       } else {
-        title = recipe ? `${recipe.title} | Velvet Pour` : "Velvet Pour";
+        title = "Velvet Pour";
         description =
-          recipe?.summary ||
           "Award-inspired cocktails, techniques, and home bar guidance.";
       }
     } else if (route.type === "resource" && route.slug && route.site.key === "cocktails") {
@@ -106,21 +110,18 @@ export default function App() {
     meta.setAttribute("content", description);
 
     const canonicalExisting = document.querySelector('link[rel="canonical"]');
-    const isManhattanRecipe =
-      route.type === "recipe" &&
-      route.slug === "manhattan" &&
-      route.site.key === "cocktails";
-    if (isManhattanRecipe) {
+    const canonicalHref =
+      route.type === "recipe" && route.site.key === "cocktails" && route.slug
+        ? cocktailRecipeCanonicalHref(route.slug)
+        : undefined;
+    if (canonicalHref) {
       let canonical = canonicalExisting;
       if (!canonical) {
         canonical = document.createElement("link");
         canonical.rel = "canonical";
         document.head.appendChild(canonical);
       }
-      canonical.setAttribute(
-        "href",
-        "https://www.velvetpour.bar/drinks/manhattan",
-      );
+      canonical.setAttribute("href", canonicalHref);
     } else if (canonicalExisting) {
       canonicalExisting.remove();
     }

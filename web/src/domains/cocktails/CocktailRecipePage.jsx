@@ -7,6 +7,16 @@ import {
 import CocktailSidebar from "./components/CocktailSidebar";
 import { withCocktailSite } from "./withCocktailSite";
 import { trackEvent } from "@/lib/analytics";
+import {
+  drinkDisplayName,
+  editorialTitlesLower,
+  needsIngredientsH2,
+  needsHowToH2,
+  needsVariationsH2,
+  pickInternalDrinkSlugs,
+  recipeHeroImageAlt,
+  variationBlurbForSlug,
+} from "./recipePageSeo";
 
 /** Recipe-blog article: Raleway headers, Roboto body (main column only). */
 const velvet = {
@@ -174,7 +184,8 @@ function editorialParagraphs(body) {
     .filter(Boolean);
 }
 
-const manhattanSeoHeading = {
+/** Shared typography for additive SEO sections on cocktail recipe pages. */
+const recipeAddonHeading = {
   fontFamily: velvet.fontHeading,
   fontSize: "24px",
   fontWeight: 600,
@@ -184,7 +195,7 @@ const manhattanSeoHeading = {
   letterSpacing: "-0.02em",
 };
 
-const manhattanSeoBody = {
+const recipeAddonBody = {
   margin: "0 0 1em",
   fontSize: "17px",
   lineHeight: "1.75",
@@ -193,103 +204,136 @@ const manhattanSeoBody = {
   fontFamily: velvet.fontBody,
 };
 
-function ManhattanSeoSections() {
+/** Additive SEO blocks for all /drinks/* recipe pages — skips H2s already present in editorial JSON. */
+function RecipeSeoAddon({ slug, editorialBlocks, ingredients, steps }) {
+  const titlesLower = editorialTitlesLower(editorialBlocks);
+  const showIng = needsIngredientsH2(titlesLower);
+  const showHow = needsHowToH2(titlesLower);
+  const varBlurb = variationBlurbForSlug(slug);
+  const showVar = needsVariationsH2(titlesLower) && varBlurb;
+
+  const ingList = safeArr(ingredients);
+  const stepList = safeArr(steps);
+  const linkSlugs = pickInternalDrinkSlugs(slug, 3);
+
+  const addonListStyle = {
+    margin: "0 0 28px",
+    paddingLeft: "1.25em",
+    fontSize: "17px",
+    lineHeight: 1.75,
+    color: "#333",
+    fontWeight: 300,
+    fontFamily: velvet.fontBody,
+  };
+
+  const blocks = [];
+
+  if (showIng && ingList.length > 0) {
+    blocks.push({
+      key: "ing",
+      content: (
+        <>
+          <h2 style={recipeAddonHeading}>Ingredients</h2>
+          <ul style={addonListStyle}>
+            {ingList.map((item, index) => (
+              <li
+                key={index}
+                style={{
+                  marginBottom: index < ingList.length - 1 ? "0.35em" : 0,
+                }}
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+        </>
+      ),
+    });
+  }
+
+  if (showHow && stepList.length > 0) {
+    blocks.push({
+      key: "how",
+      content: (
+        <>
+          <h2 style={recipeAddonHeading}>How to Make</h2>
+          <ol style={addonListStyle}>
+            {stepList.map((step, index) => (
+              <li
+                key={index}
+                style={{
+                  marginBottom: index < stepList.length - 1 ? "0.5em" : 0,
+                }}
+              >
+                {step}
+              </li>
+            ))}
+          </ol>
+        </>
+      ),
+    });
+  }
+
+  if (showVar) {
+    blocks.push({
+      key: "var",
+      content: (
+        <>
+          <h2 style={recipeAddonHeading}>Variations</h2>
+          <p style={{ ...recipeAddonBody, marginBottom: 0 }}>{varBlurb}</p>
+        </>
+      ),
+    });
+  }
+
+  if (linkSlugs.length > 0) {
+    blocks.push({
+      key: "links",
+      content: (
+        <p style={{ ...recipeAddonBody, marginBottom: 0 }}>
+          <span>Along the same shelf: </span>
+          {linkSlugs.map((s, i) => {
+            const r = getCocktailRecipeBySlug(s);
+            const label = r ? drinkDisplayName(r) : s;
+            const text = `${label} cocktail`;
+            return (
+              <Fragment key={s}>
+                {i === 0 ? null : i === linkSlugs.length - 1 ? " and " : ", "}
+                <a
+                  href={withCocktailSite(`/drinks/${s}`)}
+                  style={{
+                    color: velvet.linkBlue,
+                    fontWeight: 500,
+                    textDecoration: "none",
+                  }}
+                >
+                  {text}
+                </a>
+              </Fragment>
+            );
+          })}
+          .
+        </p>
+      ),
+    });
+  }
+
+  if (blocks.length === 0) return null;
+
   return (
-    <div
-      style={{
-        marginBottom: "44px",
-        maxWidth: velvet.proseMax,
-      }}
-    >
-      <article style={{ marginTop: 0 }}>
-        <h2 style={manhattanSeoHeading}>Ingredients</h2>
-        <ul
+    <div style={{ marginBottom: "44px", maxWidth: velvet.proseMax }}>
+      {blocks.map((b, i) => (
+        <article
+          key={b.key}
           style={{
-            margin: "0 0 28px",
-            paddingLeft: "1.25em",
-            fontSize: "17px",
-            lineHeight: 1.75,
-            color: "#333",
-            fontWeight: 300,
-            fontFamily: velvet.fontBody,
+            marginTop: i === 0 ? 0 : "34px",
+            paddingTop: i === 0 ? 0 : "28px",
+            borderTop: i === 0 ? "none" : "1px solid #eee",
           }}
         >
-          <li style={{ marginBottom: "0.35em" }}>Bourbon or Rye</li>
-          <li style={{ marginBottom: "0.35em" }}>Sweet Vermouth</li>
-          <li style={{ marginBottom: 0 }}>Angostura bitters</li>
-        </ul>
-      </article>
-
-      <article style={{ marginTop: "34px", paddingTop: "28px", borderTop: "1px solid #eee" }}>
-        <h2 style={manhattanSeoHeading}>How to Make a Manhattan</h2>
-        <ol
-          style={{
-            margin: "0 0 28px",
-            paddingLeft: "1.25em",
-            fontSize: "17px",
-            lineHeight: 1.75,
-            color: "#333",
-            fontWeight: 300,
-            fontFamily: velvet.fontBody,
-          }}
-        >
-          <li style={{ marginBottom: "0.5em" }}>
-            Add whiskey, sweet vermouth, and bitters to a mixing glass.
-          </li>
-          <li style={{ marginBottom: "0.5em" }}>Fill with ice and stir until chilled and diluted.</li>
-          <li style={{ marginBottom: "0.5em" }}>Strain into a chilled coupe or cocktail glass.</li>
-          <li style={{ marginBottom: 0 }}>Garnish with a cherry.</li>
-        </ol>
-      </article>
-
-      <article style={{ marginTop: "34px", paddingTop: "28px", borderTop: "1px solid #eee" }}>
-        <h2 style={manhattanSeoHeading}>Best Whiskey for a Manhattan</h2>
-        <p style={{ ...manhattanSeoBody, marginBottom: "1em" }}>
-          Rye whiskey keeps the drink drier and spicier; bourbon rounds it out with softer,
-          sweeter notes. Pick one deliberately—the spirit leads the glass.
-        </p>
-        <p style={{ ...manhattanSeoBody, marginBottom: 0 }}>
-          Alongside the Manhattan, explore the{" "}
-          <a
-            href={withCocktailSite("/drinks/old-fashioned")}
-            style={{ color: velvet.linkBlue, fontWeight: 500, textDecoration: "none" }}
-          >
-            Old Fashioned cocktail
-          </a>{" "}
-          for another whiskey-forward classic, or the{" "}
-          <a
-            href={withCocktailSite("/drinks/negroni")}
-            style={{ color: velvet.linkBlue, fontWeight: 500, textDecoration: "none" }}
-          >
-            Negroni cocktail
-          </a>{" "}
-          for a Campari-led stirred template.
-        </p>
-      </article>
-
-      <article style={{ marginTop: "34px", paddingTop: "28px", borderTop: "1px solid #eee" }}>
-        <h2 style={manhattanSeoHeading}>Manhattan Variations</h2>
-        <ul
-          style={{
-            margin: 0,
-            paddingLeft: "1.25em",
-            fontSize: "17px",
-            lineHeight: 1.75,
-            color: "#333",
-            fontWeight: 300,
-            fontFamily: velvet.fontBody,
-          }}
-        >
-          <li style={{ marginBottom: "0.35em" }}>
-            <strong style={{ fontWeight: 500, color: velvet.text }}>Perfect Manhattan</strong>
-            — splits sweet and dry vermouth for a middle-ground profile.
-          </li>
-          <li style={{ marginBottom: 0 }}>
-            <strong style={{ fontWeight: 500, color: velvet.text }}>Dry Manhattan</strong>
-            — uses dry vermouth instead of sweet for a leaner, more aromatic sip.
-          </li>
-        </ul>
-      </article>
+          {b.content}
+        </article>
+      ))}
     </div>
   );
 }
@@ -918,7 +962,7 @@ export default function CocktailRecipePage({ slug }) {
                     color: velvet.text,
                   }}
                 >
-                  {slug === "manhattan" ? "Manhattan Cocktail Recipe" : data.title ?? "Cocktail"}
+                  {data.title ?? "Cocktail"}
                 </h1>
                 {hasSummary && (
                   <p
@@ -960,13 +1004,7 @@ export default function CocktailRecipePage({ slug }) {
                 >
                   <img
                     src={heroSrc}
-                    alt={
-                      slug === "manhattan"
-                        ? "Manhattan cocktail in a coupe glass"
-                        : data.title
-                          ? `${data.title} — featured image`
-                          : "Recipe featured image"
-                    }
+                    alt={recipeHeroImageAlt(data)}
                     loading="eager"
                     decoding="async"
                     fetchPriority="high"
@@ -1332,7 +1370,12 @@ export default function CocktailRecipePage({ slug }) {
 
             <AdSlot label="Affiliate slot — bar tools / glassware" />
 
-            {slug === "manhattan" ? <ManhattanSeoSections /> : null}
+            <RecipeSeoAddon
+              slug={slug}
+              editorialBlocks={editorialBlocks}
+              ingredients={ingredients}
+              steps={steps}
+            />
 
             {/* Recipe card — primary destination, printable, light */}
             <section
